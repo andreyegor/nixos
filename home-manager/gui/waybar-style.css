@@ -1,0 +1,17 @@
+* {
+    font-family: "Fira Code Light";
+    min-height: 20px;
+    min-width: 20px;
+    font-size: 14;
+}
+
+window#waybar {
+    border-radius: 5px;
+    background-color: #303446;
+}
+
+.module {
+    transition: all .3s ease;
+    margin-left: 5px;
+    margin-right: 5px;
+}
