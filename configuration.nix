@@ -30,50 +30,6 @@
   #   default = "http://127.0.0.1:2080";
   #   noProxy = "localhost,127.0.0.1,127.0.0.0/8,::1";
   # };
-  # services.sing-box = {
-  #   enable = true;
-  #   settings = {
-  #     log = {
-  #       level = "debug";
-  #       timestamp = true;
-  #     };
-  #     inbounds = [
-  #       {
-  #         type = "vless";
-  #         listen = "::";
-  #         listen_port = 443;
-  #         users = [
-  #           {
-  #             uuid = "9ad37ac1-796a-4fb1-aee0-9f4e190b0213";
-  #             flow = "xtls-rprx-vision";
-  #           }
-  #         ];
-  #         tls = {
-  #           enabled = true;
-  #           server_name = "70.34.214.71";
-  #           alpn = [
-  #             "h2"
-  #             "http/1.1"
-  #           ];
-  #           reality = {
-  #             enabled = false;
-  #           };
-  #         };
-  #         sniff = true;
-  #         sniff_override_destination = true;
-  #       }
-  #     ];
-  #     outbounds = [
-  #       {
-  #         type = "direct";
-  #       }
-  #       {
-  #         type = "block";
-  #         tag = "blocked";
-  #       }
-  #     ];
-  #   };
-  # };
 
   time.timeZone = "Asia/Novosibirsk";
 
