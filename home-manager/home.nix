@@ -20,6 +20,7 @@
     # (discord.override {
     #   withVencord = true;
     # })
+    git-credential-manager
     telegram-desktop
     spotify
     nekoray
