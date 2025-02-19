@@ -33,7 +33,7 @@
 
     #Autostart
     exec-once = [
-      "sleep 0.5; hyprlock"
+      "sleep 1; hyprlock"
       "hypridle"
       "waybar"
       "asusctl profile -P quiet"
