@@ -17,8 +17,10 @@
   home.packages = with pkgs; [
     brightnessctl
     #-------------------------
+    # (discord.override {
+    #   withVencord = true;
+    # })
     telegram-desktop
-    #discord
     spotify
     nekoray
     htop
