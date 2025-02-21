@@ -4,7 +4,10 @@
     nixos-switch = "sudo nixos-rebuild switch --flake ~/.config/nixos/";
     nixos-boot = "sudo nixos-rebuild switch --flake ~/.config/nixos/";
     nixos-test = "sudo nixos-rebuild switch --flake ~/.config/nixos/";
+    nixos-clear = "sudo nix-collect-garbage -d";
+    nixos-optimise = "nix-store --optimise";
     home-switch = "home-manager switch --flake ~/.config/nixos/";
+    home-clear = "home-manager expire-generations \"-1 days\"";
     flake-update = "nix flake update --flake ~/.config/nixos/";
   };
 

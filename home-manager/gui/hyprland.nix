@@ -20,7 +20,7 @@
   wayland.windowManager.hyprland.settings = {
     #Screen
     monitor = [
-      ",1920x1080@144,auto,1.5"
+      ",1920x1080@60,auto,1.5"
       "tv,3840x2160@60,auto,auto"
     ];
 
