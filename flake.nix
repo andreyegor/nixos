@@ -8,9 +8,6 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
-    spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -25,18 +22,7 @@
         system = "x86_64-linux";
         modules = [
           catppuccin.nixosModules.catppuccin
-          #home-manager.nixosModules.home-manager
           ./configuration.nix
-
-          # {
-          #   # if you use home-manager
-          #   home-manager.users.egor = {
-          #     imports = [
-          #       ./home-manager/home.nix
-          #       catppuccin.homeManagerModules.catppuccin
-          #     ];
-          #   };
-          # }
         ];
       };
 
@@ -45,9 +31,7 @@
         modules = [
           ./home-manager/home.nix
           catppuccin.homeManagerModules.catppuccin
-          # inputs.spicetify-nix.homeManagerModules.default
         ];
-
       };
     };
 
