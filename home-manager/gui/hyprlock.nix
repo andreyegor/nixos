@@ -52,17 +52,17 @@
         #color = "rgba(242, 243, 244, 0.75)";
         font_size = 22;
         font_family = "JetBrains Mono";
-        position = "0, 300";
+        position = "0, 200";
         halign = "center";
         valign = "center";
       }
 
       # time
       {
-        text = ''cmd[update:1000] echo "$(date +"%-I:%M")"'';
+        text = ''cmd[update:1000] echo "$(date +"%-H:%M")"'';
         font_size = 95;
         font_family = "JetBrains Mono Extrabold";
-        position = "0, 200";
+        position = "0, 100";
         halign = "center";
         valign = "center";
       }

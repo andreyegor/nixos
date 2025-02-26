@@ -9,6 +9,15 @@
     package = pkgs.catppuccin-cursors.frappeDark;
   };
 
+  dconf = {
+    enable = true;
+    settings = {
+      "org/gnome/desktop/interface" = {
+        color-scheme = "prefer-dark";
+      };
+    };
+  };
+
   gtk = {
     enable = true;
     cursorTheme.size = 18;

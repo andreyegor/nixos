@@ -16,15 +16,18 @@
 
   home.packages = with pkgs; [
     brightnessctl
+    bluetuith
+    pavucontrol
     #-------------------------
-    # (discord.override {
-    #   withVencord = true;
-    # })
-    git-credential-manager
     telegram-desktop
     spotify
     nekoray
     htop
     unzip
+    #-------------------------
+    git-credential-manager
+    scala
+    jdk
+    python313
   ];
 }

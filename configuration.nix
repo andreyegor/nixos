@@ -28,6 +28,7 @@
   # };
 
   time.timeZone = "Asia/Novosibirsk";
+  time.hardwareClockInLocalTime = true;
 
   # Some nix storage settings
   nix.optimise.automatic = true;
@@ -118,8 +119,9 @@
 
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
-    wget
     home-manager
+
+    wget
     nixfmt-rfc-style
   ];
 

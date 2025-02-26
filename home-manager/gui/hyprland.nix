@@ -20,7 +20,7 @@
   wayland.windowManager.hyprland.settings = {
     #Screen
     monitor = [
-      ",1920x1080@60,auto,1.5"
+      ",1920x1080@60,auto,1.25"
       "tv,3840x2160@60,auto,auto"
     ];
 
@@ -29,7 +29,7 @@
     #My programs
     "$terminal" = "kitty";
     "$fileManager" = "dolphin";
-    "$menu" = "rofi --show drun";
+    "$menu" = "rofi -show drun";
 
     #Autostart
     exec-once = [
@@ -83,7 +83,7 @@
         "workspaces, 1, 6, default"
       ];
     };
-    
+
     #https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
     dwindle = {
       pseudotile = true; # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
@@ -103,7 +103,11 @@
       kb_options = "grp:win_space_toggle";
       follow_mouse = 1;
       sensitivity = 0; # -1.0 - 1.0, 0 means no modification.
-      "touchpad:natural_scroll" = true;
+
+      touchpad = {
+        natural_scroll = true;
+        scroll_factor = 0.55;
+      };
     };
 
     gestures = {
@@ -159,7 +163,7 @@
       "$mainMod, L, exec, hyprlock"
 
       #My asus binds
-      ", 0x1008ff41, exec, rofi -show drun #rog button, menu"
+      ", 0x1008ff41, exec, $menu #rog button, menu"
       ", 0x1008ff13, exec, pactl -- set-sink-volume 0 +10%"
       ", 0x1008ff11, exec, pactl -- set-sink-volume 0 -10%"
       ", 0x1008ffb2, exec, pactl set-source-mute 1 toggle"
