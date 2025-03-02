@@ -31,6 +31,7 @@
     };
 
     clock = {
+      tooltip = false;
       format = "{:%b %d | %H:%M}";
     };
 

@@ -15,6 +15,7 @@
   ];
 
   home.packages = with pkgs; [
+    hyprshot
     brightnessctl
     bluetuith
     pavucontrol
@@ -24,6 +25,7 @@
     nekoray
     htop
     unzip
+    wev
     #-------------------------
     git-credential-manager
     scala

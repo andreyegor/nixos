@@ -161,6 +161,7 @@
 
       #My binds
       "$mainMod, L, exec, hyprlock"
+      ", Print, exec, hyprshot -m region -o ~/hyprshots"
 
       #My asus binds
       ", 0x1008ff41, exec, $menu #rog button, menu"
