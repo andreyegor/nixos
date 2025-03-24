@@ -47,8 +47,8 @@
     };
   };
   services.logind = {
-    lidSwitch = "suspend-then-hibernate";
-    powerKey = "hibernate";
+    lidSwitch = "suspend";
+    powerKey = "poweroff";
     # powerKeyLongPress = "poweroff";
   };
 
@@ -120,7 +120,6 @@
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
     home-manager
-
     wget
     nixfmt-rfc-style
   ];
