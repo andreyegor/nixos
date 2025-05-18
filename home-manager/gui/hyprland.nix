@@ -15,7 +15,17 @@
   };
 
   programs.fish.enable = true;
-  programs.rofi.enable = true;
+
+  programs.rofi = {
+    enable = true;
+    extraConfig = {
+      modi = "drun,run";
+      show-icons = true;
+      font = "JetBrainsMono Nerd Font 14";
+      sidebar-mode = false;
+      disable-history = false;
+    };
+  };
 
   wayland.windowManager.hyprland.settings = {
     #Screen

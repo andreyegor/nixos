@@ -30,7 +30,15 @@
         pkgs = nixpkgs.legacyPackages."x86_64-linux";
         modules = [
           ./home-manager/home.nix
-          catppuccin.homeManagerModules.catppuccin
+          catppuccin.homeModules.catppuccin
+        ];
+      };
+      # for standalone home-manager installations
+      homeConfigurations.pepperjack = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        modules = [
+          ./home-manager/home.nix
+          catppuccin.homeModules.catppuccin
         ];
       };
     };
