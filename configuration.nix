@@ -12,6 +12,8 @@
   ];
 
   # EFI boot loader.
+  # boot.loader.limine.enable = true;
+  # boot.loader.limine.efiSupport = true;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -19,6 +21,22 @@
   networking.hostName = "myLaptop";
   networking.networkmanager.enable = true;
 
+  # For wpa-2 enterpise
+  systemd.services.wpa_supplicant.environment.OPENSSL_CONF =
+    pkgs.writeText "openssl.cnf" ''
+      openssl_conf = openssl_init
+  
+      [openssl_init]
+      ssl_conf = ssl_sect
+  
+      [ssl_sect]
+      system_default = system_default_sect
+  
+      [system_default_sect]
+      Options = UnsafeLegacyRenegotiation
+      CipherString = DEFAULT:@SECLEVEL=0
+    '';
+  
   # Nekoray, sign box
   # Comment when proxy turned off
   # TODO proper way to do this
@@ -125,8 +143,8 @@
   ];
 
   fonts.packages = with pkgs; [
-    nerdfonts
-  ];
+  
+  ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues nerd-fonts) ;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

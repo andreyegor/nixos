@@ -4,7 +4,7 @@
     flavor = "frappe";
     hyprland.accent = "green";
     accent = "green";
-    vscode.enable = false;
+    vscode.profiles.default.enable = false;
     hyprlock.useDefaultConfig = false;
   };
 }
