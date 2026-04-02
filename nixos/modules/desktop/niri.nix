@@ -10,9 +10,9 @@
   environment.systemPackages = lib.mkAfter (
     with pkgs;
     [
-      ironbar
+      waybar
       fuzzel
-      foot
+      kitty
     ]
   );
 }

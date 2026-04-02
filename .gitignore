@@ -13,3 +13,6 @@
 
 !fuzzel/
 !fuzzel/**
+
+!ironbar
+!ironbar/**

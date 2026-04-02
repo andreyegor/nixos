@@ -5,6 +5,7 @@
     ./hardware-configuration.nix
     ./device.nix
 
+    ../../modules/system/bluetooth.nix
     ../../modules/system/core.nix
     ../../modules/system/boot.nix
     ../../modules/system/environment.nix
