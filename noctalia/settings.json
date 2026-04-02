@@ -25,7 +25,7 @@
         "showIconBackground": false,
         "sortByMostUsed": true,
         "terminalCommand": "kitty -e",
-        "viewMode": "grid"
+        "viewMode": "list"
     },
     "audio": {
         "mprisBlacklist": [
@@ -149,10 +149,6 @@
                     ]
                 },
                 {
-                    "iconColor": "none",
-                    "id": "WallpaperSelector"
-                },
-                {
                     "hideWhenZero": false,
                     "hideWhenZeroUnread": false,
                     "iconColor": "none",
@@ -177,11 +173,8 @@
                     "textColor": "none"
                 },
                 {
-                    "applyToAllMonitors": false,
-                    "displayMode": "onhover",
                     "iconColor": "none",
-                    "id": "Brightness",
-                    "textColor": "none"
+                    "id": "WallpaperSelector"
                 },
                 {
                     "colorizeDistroLogo": false,
@@ -278,13 +271,13 @@
                     "id": "Notifications"
                 },
                 {
-                    "id": "PowerProfile"
-                },
-                {
                     "id": "KeepAwake"
                 },
                 {
                     "id": "NightLight"
+                },
+                {
+                    "id": "AirplaneMode"
                 }
             ]
         }
@@ -450,11 +443,11 @@
     "nightLight": {
         "autoSchedule": true,
         "dayTemp": "6500",
-        "enabled": false,
+        "enabled": true,
         "forced": false,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
-        "nightTemp": "4000"
+        "nightTemp": "4998"
     },
     "noctaliaPerformance": {
         "disableDesktopWidgets": true,
@@ -637,7 +630,7 @@
         ],
         "fillColor": "#000000",
         "fillMode": "crop",
-        "hideWallpaperFilenames": false,
+        "hideWallpaperFilenames": true,
         "linkLightAndDarkWallpapers": true,
         "monitorDirectories": [
         ],

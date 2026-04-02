@@ -20,6 +20,20 @@
   services.dbus.enable = true;
   services.xserver.enable = true;
 
+  systemd.user.services.lock-before-sleep = {
+    Unit = {
+      Description = "Lock screen with Noctalia before sleep";
+      Before = [ "sleep.target" ];
+    };
+    Service = {
+      ExecStart = "${pkgs.noctalia-shell}/bin/noctalia-shell ipc call lockScreen lock";
+      Type = "oneshot";
+    };
+    Install = {
+      WantedBy = [ "sleep.target" ];
+    };
+  };
+
   environment.systemPackages = lib.mkAfter (
     with pkgs;
     [
