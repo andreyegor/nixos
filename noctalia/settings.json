@@ -42,7 +42,7 @@
     "bar": {
         "autoHideDelay": 500,
         "autoShowDelay": 150,
-        "backgroundOpacity": 0.93,
+        "backgroundOpacity": 1,
         "barType": "simple",
         "capsuleColorKey": "none",
         "capsuleOpacity": 1,
@@ -71,10 +71,10 @@
         "rightClickFollowMouse": true,
         "screenOverrides": [
         ],
-        "showCapsule": true,
+        "showCapsule": false,
         "showOnWorkspaceSwitch": true,
         "showOutline": false,
-        "useSeparateOpacity": false,
+        "useSeparateOpacity": true,
         "widgetSpacing": 6,
         "widgets": {
             "center": [
@@ -118,39 +118,6 @@
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
                     "useCustomFont": false
-                },
-                {
-                    "compactMode": true,
-                    "diskPath": "/",
-                    "iconColor": "none",
-                    "id": "SystemMonitor",
-                    "showCpuCores": false,
-                    "showCpuFreq": false,
-                    "showCpuTemp": true,
-                    "showCpuUsage": true,
-                    "showDiskAvailable": false,
-                    "showDiskUsage": false,
-                    "showDiskUsageAsPercent": false,
-                    "showGpuTemp": false,
-                    "showLoadAverage": false,
-                    "showMemoryAsPercent": false,
-                    "showMemoryUsage": true,
-                    "showNetworkStats": false,
-                    "showSwapUsage": false,
-                    "textColor": "none",
-                    "useMonospaceFont": true,
-                    "usePadding": false
-                },
-                {
-                    "colorizeIcons": false,
-                    "hideMode": "hidden",
-                    "id": "ActiveWindow",
-                    "maxWidth": 145,
-                    "scrollingMode": "hover",
-                    "showIcon": true,
-                    "showText": true,
-                    "textColor": "none",
-                    "useFixedWidth": false
                 },
                 {
                     "compactMode": false,
@@ -256,7 +223,7 @@
         "predefinedScheme": "Catppuccin",
         "schedulingMode": "off",
         "syncGsettings": true,
-        "useWallpaperColors": false
+        "useWallpaperColors": true
     },
     "controlCenter": {
         "cards": [
@@ -333,7 +300,7 @@
         "deadOpacity": 0.6,
         "displayMode": "auto_hide",
         "dockType": "floating",
-        "enabled": true,
+        "enabled": false,
         "floatingRatio": 1,
         "groupApps": false,
         "groupClickAction": "cycle",
@@ -365,13 +332,13 @@
         "animationDisabled": false,
         "animationSpeed": 1,
         "autoStartAuth": false,
-        "avatarImage": "/home/egor/.face",
+        "avatarImage": "/home/egor/Pictures/me.jpg",
         "boxRadiusRatio": 1,
         "clockFormat": "hh\\nmm",
         "clockStyle": "custom",
         "compactLockScreen": false,
         "dimmerOpacity": 0.2,
-        "enableBlurBehind": true,
+        "enableBlurBehind": false,
         "enableLockScreenCountdown": true,
         "enableLockScreenMediaControls": false,
         "enableShadows": false,
@@ -412,7 +379,7 @@
         "passwordChars": false,
         "radiusRatio": 1,
         "reverseScroll": false,
-        "scaleRatio": 0.9500000000000001,
+        "scaleRatio": 1,
         "screenRadiusRatio": 1,
         "shadowDirection": "bottom_right",
         "shadowOffsetX": 2,
@@ -456,7 +423,7 @@
         "firstDayOfWeek": -1,
         "hideWeatherCityName": false,
         "hideWeatherTimezone": false,
-        "name": "",
+        "name": "Tomsk",
         "showCalendarEvents": true,
         "showCalendarWeather": true,
         "showWeekNumberInCalendar": false,
@@ -548,38 +515,59 @@
         "powerOptions": [
             {
                 "action": "lock",
+                "command": "",
+                "countdownEnabled": true,
                 "enabled": true,
                 "keybind": "1"
             },
             {
                 "action": "suspend",
+                "command": "",
+                "countdownEnabled": true,
                 "enabled": true,
                 "keybind": "2"
             },
             {
                 "action": "hibernate",
+                "command": "",
+                "countdownEnabled": true,
                 "enabled": true,
                 "keybind": "3"
             },
             {
                 "action": "reboot",
+                "command": "",
+                "countdownEnabled": true,
                 "enabled": true,
                 "keybind": "4"
             },
             {
                 "action": "logout",
+                "command": "",
+                "countdownEnabled": true,
                 "enabled": true,
                 "keybind": "5"
             },
             {
                 "action": "shutdown",
+                "command": "",
+                "countdownEnabled": true,
                 "enabled": true,
                 "keybind": "6"
             },
             {
                 "action": "rebootToUefi",
+                "command": "",
+                "countdownEnabled": true,
                 "enabled": true,
                 "keybind": "7"
+            },
+            {
+                "action": "userspaceReboot",
+                "command": "",
+                "countdownEnabled": true,
+                "enabled": false,
+                "keybind": ""
             }
         ],
         "showHeader": true,
@@ -611,6 +599,14 @@
     },
     "templates": {
         "activeTemplates": [
+            {
+                "enabled": true,
+                "id": "niri"
+            },
+            {
+                "enabled": true,
+                "id": "kitty"
+            }
         ],
         "enableUserTheming": false
     },
@@ -618,11 +614,11 @@
         "boxBorderEnabled": false,
         "fontDefault": "Sans Serif",
         "fontDefaultScale": 1,
-        "fontFixed": "monospace",
+        "fontFixed": "Fira Code",
         "fontFixedScale": 1,
-        "panelBackgroundOpacity": 0.93,
+        "panelBackgroundOpacity": 1,
         "panelsAttachedToBar": true,
-        "scrollbarAlwaysVisible": true,
+        "scrollbarAlwaysVisible": false,
         "settingsPanelMode": "attached",
         "settingsPanelSideBarCardStyle": false,
         "tooltipsEnabled": true,
@@ -647,10 +643,10 @@
         "panelPosition": "follow_bar",
         "randomIntervalSec": 300,
         "setWallpaperOnAllMonitors": true,
-        "showHiddenFiles": false,
+        "showHiddenFiles": true,
         "skipStartupTransition": false,
         "solidColor": "#1a1a2e",
-        "sortOrder": "name",
+        "sortOrder": "date_desc",
         "transitionDuration": 1500,
         "transitionEdgeSmoothness": 0.05,
         "transitionType": [

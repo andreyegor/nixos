@@ -8,10 +8,9 @@
 
 {
   programs.niri.enable = true;
-
   services.upower.enable = true;
-
   programs.xwayland.enable = true;
+  programs.dconf.enable = true;
   xdg.portal = {
     enable = true;
     extraPortals = [
@@ -32,7 +31,11 @@
       brightnessctl
       pamixer
 
-      wev
+      dconf
+      glib
+      gsettings-desktop-schemas
+
+      gnome-themes-extra
 
       xwayland-satellite
       xwayland

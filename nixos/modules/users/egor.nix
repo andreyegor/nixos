@@ -29,8 +29,8 @@
       lowfi
       hoppscotch
       android-studio
-      vesktop
-      spotify
+      discord
+      pkgsUnstable.spotify
       yandex-music
       telegram-desktop
       onlyoffice-desktopeditors
