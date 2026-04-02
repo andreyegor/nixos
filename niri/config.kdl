@@ -28,6 +28,11 @@ output "eDP-1" {
     position x=1920 y=69
 }
 
+cursor {
+    xcursor-theme "Adwaita"
+    xcursor-size 24
+}
+
 layout {
     gaps 16
     center-focused-column "on-overflow"
@@ -49,6 +54,7 @@ layout {
 
 spawn-at-startup "noctalia-shell"
 spawn-at-startup "xwayland-satellite"
+spawn-at-startup "sh" "-c" "sleep 1 && noctalia-shell ipc call lockScreen lock"
 
 hotkey-overlay {
     skip-at-startup

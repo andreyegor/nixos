@@ -9,6 +9,7 @@
     WEBKIT_DISABLE_DMABUF_RENDERER = 1; # For hoppscotch
     QT_QPA_PLATFORM = "wayland;xcb";
     GTK_THEME = "Adwaita-dark";
+    XCURSOR_SIZE = "24";
   };
   environment.etc = {
     "xdg/gtk-2.0/gtkrc".text = "gtk-error-bell=0";

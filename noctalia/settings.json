@@ -374,13 +374,13 @@
         },
         "language": "",
         "lockOnSuspend": true,
-        "lockScreenAnimations": false,
+        "lockScreenAnimations": true,
         "lockScreenBlur": 0,
         "lockScreenCountdownDuration": 10000,
         "lockScreenMonitors": [
         ],
         "lockScreenTint": 0,
-        "passwordChars": false,
+        "passwordChars": true,
         "radiusRatio": 1,
         "reverseScroll": false,
         "scaleRatio": 1,
@@ -512,10 +512,10 @@
     },
     "sessionMenu": {
         "countdownDuration": 1000,
-        "enableCountdown": true,
+        "enableCountdown": false,
         "largeButtonsLayout": "single-row",
-        "largeButtonsStyle": true,
-        "position": "center",
+        "largeButtonsStyle": false,
+        "position": "top_right",
         "powerOptions": [
             {
                 "action": "lock",
@@ -575,7 +575,7 @@
             }
         ],
         "showHeader": true,
-        "showKeybinds": true
+        "showKeybinds": false
     },
     "settingsVersion": 59,
     "systemMonitor": {

@@ -23,7 +23,7 @@
 
     # ИЛИ cosmic ИЛИ greetd
     # ../../modules/desktop/cosmic.nix
-    ../../modules/desktop/greetd.nix
+    ../../modules/desktop/regreet.nix
     ../../modules/desktop/niri.nix
     ../../modules/desktop/nvidia.nix
     ../../modules/desktop/powersave.nix
