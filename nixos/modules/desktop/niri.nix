@@ -21,16 +21,12 @@
   services.xserver.enable = true;
 
   systemd.user.services.lock-before-sleep = {
-    Unit = {
-      Description = "Lock screen with Noctalia before sleep";
-      Before = [ "sleep.target" ];
-    };
-    Service = {
-      ExecStart = "${pkgs.noctalia-shell}/bin/noctalia-shell ipc call lockScreen lock";
+    before = [ "sleep.target" ];
+    wantedBy = [ "sleep.target" ];
+
+    serviceConfig = {
       Type = "oneshot";
-    };
-    Install = {
-      WantedBy = [ "sleep.target" ];
+      ExecStart = "noctalia-shell ipc call lockScreen lock";
     };
   };
 
