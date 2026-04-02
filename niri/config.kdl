@@ -51,7 +51,7 @@ layout {
     }
 }
 
-spawn-at-startup "quickshell"
+spawn-at-startup "noctalia"
 spawn-at-startup "xwayland-satellite"
 
 hotkey-overlay {
@@ -73,7 +73,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+T { spawn "kitty"; }
-    Mod+Z { spawn "fuzzel"; }
+    Mod+Z { spawn "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
@@ -89,8 +89,12 @@ binds {
     XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 
-    Mod+O repeat=false { toggle-overview; }
+    XF86KbdBrightnessUp { spawn "brightnessctl" "-d" "asus::kbd_backlight" "set" "+1"; }
+    XF86KbdBrightnessDown { spawn "brightnessctl" "-d" "asus::kbd_backlight" "set" "1-"; }
+
+    Mod+A repeat=false { toggle-overview; }
     Mod+Q repeat=false { close-window; }
+
 
     Mod+Left  { focus-column-left; }
     Mod+Right { focus-column-right; }
@@ -153,7 +157,7 @@ binds {
     Mod+Ctrl+8 { move-column-to-workspace 8; }
     Mod+Ctrl+9 { move-column-to-workspace 9; }
 
-    Mod+R { switch-preset-column-width; }
+    Mod+D { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
     Mod+F { maximize-column; }

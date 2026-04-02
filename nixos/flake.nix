@@ -4,6 +4,10 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -11,6 +15,7 @@
       self,
       nixpkgs,
       unstable,
+      noctalia,
       ...
     }:
     let
@@ -30,7 +35,7 @@
         inherit system;
 
         specialArgs = {
-          inherit pkgsUnstable;
+          inherit pkgsUnstable noctalia;
         };
 
         modules = [

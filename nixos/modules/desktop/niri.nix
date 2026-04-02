@@ -2,11 +2,15 @@
   config,
   pkgs,
   lib,
+  noctalia,
   ...
 }:
 
 {
   programs.niri.enable = true;
+
+  services.upower.enable = true;
+
   programs.xwayland.enable = true;
   xdg.portal = {
     enable = true;
@@ -16,12 +20,19 @@
   };
   services.dbus.enable = true;
   services.xserver.enable = true;
+
   environment.systemPackages = lib.mkAfter (
     with pkgs;
     [
-      quickshell
-      fuzzel
       kitty
+      quickshell
+      noctalia.packages.${pkgs.system}.default
+      swayidle
+
+      brightnessctl
+      pamixer
+
+      wev
 
       xwayland-satellite
       xwayland

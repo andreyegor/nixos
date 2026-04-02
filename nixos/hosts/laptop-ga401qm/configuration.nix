@@ -22,6 +22,7 @@
     ../../modules/system/programs.nix
 
     ../../modules/desktop/cosmic.nix
+    ../../modules/desktop/greetd.nix
     ../../modules/desktop/niri.nix
     ../../modules/desktop/nvidia.nix
     ../../modules/desktop/powersave.nix

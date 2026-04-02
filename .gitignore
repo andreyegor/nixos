@@ -13,3 +13,9 @@
 
 !fuzzel/
 !fuzzel/**
+
+!quickshell/
+!quickshell/**
+
+!noctalia/
+!noctalia/**
