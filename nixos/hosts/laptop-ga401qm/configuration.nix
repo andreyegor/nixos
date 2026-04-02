@@ -17,6 +17,7 @@
     ../../modules/system/networking/wpa-enterprise-fix.nix
 
     ../../modules/desktop/cosmic.nix
+    ../../modules/desktop/niri.nix
     ../../modules/desktop/nvidia.nix
     ../../modules/desktop/powersave.nix
 
