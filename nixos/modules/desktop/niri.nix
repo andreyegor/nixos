@@ -10,7 +10,7 @@
   environment.systemPackages = lib.mkAfter (
     with pkgs;
     [
-      waybar
+      quickshell
       fuzzel
       kitty
     ]

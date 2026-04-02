@@ -39,7 +39,7 @@ layout {
     }
 }
 
-spawn-at-startup "ironbar"
+spawn-at-startup "quickshell"
 
 hotkey-overlay {
     skip-at-startup
