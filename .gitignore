@@ -5,14 +5,5 @@
 !nixos/
 !nixos/**
 
-!niri/
-!niri/**
-
 !cosmic/
 !cosmic/**
-
-!yambar/
-!yambar/**
-
-!fuzzel/
-!fuzzel/**

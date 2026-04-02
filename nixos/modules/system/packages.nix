@@ -20,9 +20,5 @@
     qimgv
     obs-studio
     resources
-
-    niri
-    yambar
-    fuzzel
   ];
 }
