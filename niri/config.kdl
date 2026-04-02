@@ -31,6 +31,7 @@ output "eDP-1" {
 layout {
     gaps 16
     center-focused-column "on-overflow"
+    always-center-single-column
     preset-column-widths {
         proportion 0.33333
         proportion 0.5
@@ -69,7 +70,7 @@ binds {
 
     Mod+T { spawn "kitty"; }
     Mod+Z { spawn "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Mod+L  { spawn "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
