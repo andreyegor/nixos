@@ -34,7 +34,7 @@ cursor {
 }
 
 layout {
-    gaps 16
+    gaps 10
     center-focused-column "on-overflow"
     always-center-single-column
     preset-column-widths {
