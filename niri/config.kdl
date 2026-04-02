@@ -19,11 +19,13 @@ input {
 
 output "HDMI-A-1" {
     mode "1920x1080@165.002"
+    variable-refresh-rate
     scale 1
     position x=0 y=0
 }
 output "eDP-1" {
     mode "1920x1080@143.981"
+    variable-refresh-rate
     scale 1.25
     position x=1920 y=69
 }

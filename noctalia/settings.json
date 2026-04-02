@@ -11,10 +11,10 @@
         "enableClipboardChips": true,
         "enableClipboardHistory": false,
         "enableClipboardSmartIcons": true,
-        "enableSessionSearch": true,
-        "enableSettingsSearch": true,
-        "enableWindowsSearch": true,
-        "iconMode": "native",
+        "enableSessionSearch": false,
+        "enableSettingsSearch": false,
+        "enableWindowsSearch": false,
+        "iconMode": "tabler",
         "ignoreMouseInput": false,
         "overviewLayer": false,
         "pinnedApps": [
@@ -24,8 +24,8 @@
         "showCategories": true,
         "showIconBackground": false,
         "sortByMostUsed": true,
-        "terminalCommand": "alacritty -e",
-        "viewMode": "list"
+        "terminalCommand": "kitty -e",
+        "viewMode": "grid"
     },
     "audio": {
         "mprisBlacklist": [
