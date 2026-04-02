@@ -16,8 +16,8 @@
       pciutils
       powertop
       fastfetch
-      nixfmt-rfc-style
-      bluetuith      
+      bluetuith
+      nixfmt-rfc-style    
 
       gimp
       qimgv

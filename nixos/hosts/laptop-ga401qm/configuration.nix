@@ -1,4 +1,10 @@
-{ inputs, pkgs, lib, config, ... }:
+{
+  inputs,
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 
 {
   imports = [
@@ -11,11 +17,9 @@
     ../../modules/system/environment.nix
     ../../modules/system/locale.nix
     ../../modules/system/fonts.nix
+    ../../modules/system/networking.nix
     ../../modules/system/packages.nix
     ../../modules/system/programs.nix
-
-    ../../modules/system/networking/networking.nix
-    ../../modules/system/networking/wpa-enterprise-fix.nix
 
     ../../modules/desktop/cosmic.nix
     ../../modules/desktop/niri.nix
