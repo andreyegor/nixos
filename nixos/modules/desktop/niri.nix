@@ -20,16 +20,6 @@
   services.dbus.enable = true;
   services.xserver.enable = true;
 
-  systemd.user.services.lock-before-sleep = {
-    before = [ "sleep.target" ];
-    wantedBy = [ "sleep.target" ];
-
-    serviceConfig = {
-      Type = "oneshot";
-      ExecStart = "noctalia-shell ipc call lockScreen lock";
-    };
-  };
-
   environment.systemPackages = lib.mkAfter (
     with pkgs;
     [
