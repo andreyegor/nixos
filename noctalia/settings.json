@@ -360,7 +360,7 @@
         "compactLockScreen": false,
         "dimmerOpacity": 0.2,
         "enableBlurBehind": false,
-        "enableLockScreenCountdown": true,
+        "enableLockScreenCountdown": false,
         "enableLockScreenMediaControls": false,
         "enableShadows": false,
         "forceBlackScreenCorners": true,
@@ -390,7 +390,7 @@
             ]
         },
         "language": "",
-        "lockOnSuspend": true,
+        "lockOnSuspend": false,
         "lockScreenAnimations": true,
         "lockScreenBlur": 0,
         "lockScreenCountdownDuration": 10000,
@@ -408,7 +408,7 @@
         "showChangelogOnStartup": true,
         "showHibernateOnLockScreen": false,
         "showScreenCorners": false,
-        "showSessionButtonsOnLockScreen": true,
+        "showSessionButtonsOnLockScreen": false,
         "smoothScrollEnabled": true,
         "telemetryEnabled": false
     },
