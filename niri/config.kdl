@@ -17,6 +17,7 @@ input {
     }
 }
 
+// niri msg outputs
 output "HDMI-A-1" {
     mode "1920x1080@165.002"
     variable-refresh-rate
