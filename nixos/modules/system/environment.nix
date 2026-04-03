@@ -12,6 +12,7 @@
     QT_STYLE_OVERRIDE = "adwaita-dark";
     CHROMIUM_FLAGS = "--enable-features=UseOzonePlatform --ozone-platform=wayland --force-dark-mode";
     XCURSOR_SIZE = "24";
+    XDG_CURRENT_DESKTOP = "niri";
   };
   environment.etc = {
     "xdg/gtk-2.0/gtkrc".text = "gtk-error-bell=0";

@@ -8,17 +8,33 @@
 
 {
   programs.niri.enable = true;
-  services.upower.enable = true;
   programs.xwayland.enable = true;
   programs.dconf.enable = true;
+
+  services.upower.enable = true;
+  services.dbus.enable = true;
+  services.xserver.enable = true;
+  
   xdg.portal = {
     enable = true;
+    config.common.default = [
+      "gnome"
+      "gtk"
+    ];
     extraPortals = [
+      pkgs.xdg-desktop-portal-gnome
       pkgs.xdg-desktop-portal-gtk
     ];
   };
-  services.dbus.enable = true;
-  services.xserver.enable = true;
+
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    pulse.enable = true;
+    jack.enable = true;
+  };
+
+  security.rtkit.enable = true;
 
   environment.systemPackages = lib.mkAfter (
     with pkgs;
@@ -31,24 +47,9 @@
       playerctl
       pamixer
 
-      swayidle
-
-      dconf
-      glib
-      gsettings-desktop-schemas
-
       gnome-themes-extra
 
       xwayland-satellite
-      xwayland
-      xorg.libxcb
-      xorg.xcbutilcursor
-      xorg.xcbutil
-      xorg.xcbutilwm
-      xorg.xcbutilimage
-      xorg.xcbutilkeysyms
-      qt6.qtwayland
-      libsForQt5.qtwayland
     ]
   );
 }

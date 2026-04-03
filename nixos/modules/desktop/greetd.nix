@@ -9,14 +9,13 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --autologin --cmd '${pkgs.dbus}/bin/dbus-run-session ${pkgs.niri}/bin/niri'";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --autologin --cmd ${pkgs.niri}/bin/niri-session";
         user = "greeter";
       };
       initial_session = {
-        command = "${pkgs.dbus}/bin/dbus-run-session ${pkgs.niri}/bin/niri";
+        command = "${pkgs.niri}/bin/niri-session";
         user = "egor";
       };
     };
   };
-  security.pam.services.greetd.enableGnomeKeyring = true;
 }

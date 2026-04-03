@@ -16,7 +16,7 @@
         "enableWindowsSearch": false,
         "iconMode": "tabler",
         "ignoreMouseInput": false,
-        "overviewLayer": true,
+        "overviewLayer": false,
         "pinnedApps": [
         ],
         "position": "center",
@@ -343,7 +343,7 @@
         "pinnedStatic": false,
         "position": "bottom",
         "showDockIndicator": false,
-        "showLauncherIcon": false,
+        "showLauncherIcon": true,
         "sitOnFrame": false,
         "size": 1
     },
