@@ -31,10 +31,12 @@
       playerctl
       pamixer
 
+      swayidle
+
       dconf
       glib
       gsettings-desktop-schemas
-      
+
       gnome-themes-extra
 
       xwayland-satellite

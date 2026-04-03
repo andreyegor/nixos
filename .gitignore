@@ -10,6 +10,7 @@
 
 !niri/
 !niri/**
+niri/local.kdl
 
 !noctalia/
 !noctalia/**

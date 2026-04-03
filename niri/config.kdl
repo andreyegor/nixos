@@ -18,18 +18,19 @@ input {
 }
 
 // niri msg outputs
-output "HDMI-A-1" {
-    mode "1920x1080@165.002"
-    variable-refresh-rate
-    scale 1
-    position x=0 y=0
-}
-output "eDP-1" {
-    mode "1920x1080@143.981"
-    variable-refresh-rate
-    scale 1.25
-    position x=1920 y=69
-}
+//moved to local
+// output "HDMI-A-1" {
+//     mode "1920x1080@165.002"
+//     variable-refresh-rate
+//     scale 1
+//     position x=0 y=0
+// }
+// output "eDP-1" {
+//     mode "1920x1080@143.981"
+//     variable-refresh-rate
+//     scale 1.25
+//     position x=1920 y=69
+// }
 
 cursor {
     xcursor-theme "Adwaita"
@@ -56,9 +57,11 @@ layout {
 }
 
 spawn-at-startup "noctalia-shell"
-spawn-at-startup "sh" "-c" "sleep 2 && Throne"
 spawn-at-startup "xwayland-satellite"
-spawn-at-startup "sh" "-c" "sleep 1 && noctalia-shell ipc call lockScreen lock"
+spawn-sh-at-startup "sleep 1 && noctalia-shell ipc call lockScreen lock"
+spawn-sh-at-startup "swayidle -w before-sleep \"noctalia-shell ipc call lockScreen lock\" &"
+
+spawn-sh-at-startup "sleep 2 && Throne"
 
 hotkey-overlay {
     skip-at-startup
@@ -189,4 +192,5 @@ binds {
 }
 
 include "./noctalia.kdl"
+include "./local.kdl"
 
