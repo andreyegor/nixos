@@ -48,6 +48,9 @@
         },
         {
             "actionType": "route",
+            "domain": [
+                "api.open-meteo.com"
+            ],
             "domain_suffix": [
                 "nixos.org",
                 "noctalia.dev"
