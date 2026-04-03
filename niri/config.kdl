@@ -55,6 +55,7 @@ layout {
 }
 
 spawn-at-startup "noctalia-shell"
+spawn-at-startup "sh" "-c" "sleep 2 && Throne"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "sh" "-c" "sleep 1 && noctalia-shell ipc call lockScreen lock"
 
