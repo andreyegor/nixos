@@ -28,12 +28,13 @@
       swayidle
 
       brightnessctl
+      playerctl
       pamixer
 
       dconf
       glib
       gsettings-desktop-schemas
-
+      
       gnome-themes-extra
 
       xwayland-satellite

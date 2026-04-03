@@ -16,7 +16,7 @@
         "enableWindowsSearch": false,
         "iconMode": "tabler",
         "ignoreMouseInput": false,
-        "overviewLayer": false,
+        "overviewLayer": true,
         "pinnedApps": [
         ],
         "position": "center",
@@ -32,7 +32,7 @@
         ],
         "preferredPlayer": "",
         "spectrumFrameRate": 30,
-        "spectrumMirrored": true,
+        "spectrumMirrored": false,
         "visualizerType": "linear",
         "volumeFeedback": false,
         "volumeFeedbackSoundFile": "",
@@ -70,6 +70,10 @@
         "rightClickCommand": "",
         "rightClickFollowMouse": true,
         "screenOverrides": [
+            {
+                "enabled": false,
+                "name": "HDMI-A-1"
+            }
         ],
         "showCapsule": false,
         "showOnWorkspaceSwitch": true,
@@ -178,10 +182,6 @@
                     "id": "Volume",
                     "middleClickCommand": "pwvucontrol || pavucontrol",
                     "textColor": "none"
-                },
-                {
-                    "iconColor": "none",
-                    "id": "WallpaperSelector"
                 },
                 {
                     "colorizeDistroLogo": false,
@@ -294,6 +294,11 @@
         "gridSnap": false,
         "gridSnapScale": false,
         "monitorWidgets": [
+            {
+                "name": "eDP-1",
+                "widgets": [
+                ]
+            }
         ],
         "overviewEnabled": true
     },
@@ -346,7 +351,7 @@
         "enableLockScreenCountdown": true,
         "enableLockScreenMediaControls": false,
         "enableShadows": false,
-        "forceBlackScreenCorners": false,
+        "forceBlackScreenCorners": true,
         "iRadiusRatio": 1,
         "keybinds": {
             "keyDown": [
@@ -468,7 +473,7 @@
         "enableBatteryToast": true,
         "enableKeyboardLayoutToast": false,
         "enableMarkdown": false,
-        "enableMediaToast": false,
+        "enableMediaToast": true,
         "enabled": true,
         "location": "top_right",
         "lowUrgencyDuration": 3,
@@ -621,10 +626,10 @@
         "fontFixed": "Fira Code",
         "fontFixedScale": 1,
         "panelBackgroundOpacity": 1,
-        "panelsAttachedToBar": true,
+        "panelsAttachedToBar": false,
         "scrollbarAlwaysVisible": false,
         "settingsPanelMode": "attached",
-        "settingsPanelSideBarCardStyle": false,
+        "settingsPanelSideBarCardStyle": true,
         "tooltipsEnabled": true,
         "translucentWidgets": false
     },
@@ -646,7 +651,7 @@
         "overviewTint": 0.6,
         "panelPosition": "follow_bar",
         "randomIntervalSec": 300,
-        "setWallpaperOnAllMonitors": true,
+        "setWallpaperOnAllMonitors": false,
         "showHiddenFiles": true,
         "skipStartupTransition": false,
         "solidColor": "#1a1a2e",
