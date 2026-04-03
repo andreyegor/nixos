@@ -24,7 +24,6 @@
     with pkgs;
     [
       kitty
-      quickshell
       noctalia.packages.${pkgs.system}.default
       swayidle
 
