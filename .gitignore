@@ -16,3 +16,8 @@
 
 !kitty/
 !kitty/**
+
+!Throne/
+!Throne/config/
+!Throne/config/route_profiles/
+!Throne/config/route_profiles/**
