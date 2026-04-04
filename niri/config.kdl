@@ -58,7 +58,6 @@ layout {
 
 spawn-at-startup "noctalia-shell"
 spawn-at-startup "xwayland-satellite"
-//spawn-at-startup "dbus-update-activation-environment" "--systemd" "DISPLAY" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP" "NIRI_SOCKET"
 spawn-sh-at-startup "sleep 1 && noctalia-shell ipc call lockScreen lock"
 spawn-sh-at-startup "swayidle -w before-sleep \"noctalia-shell ipc call lockScreen lock\" &"
 
@@ -72,6 +71,7 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 window-rule {
     match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
     default-floating-position x=10 y=10 relative-to="bottom-right"
+    open-focused false
 }
 
 window-rule {
