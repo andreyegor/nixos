@@ -16,7 +16,7 @@
         "enableWindowsSearch": false,
         "iconMode": "tabler",
         "ignoreMouseInput": false,
-        "overviewLayer": false,
+        "overviewLayer": true,
         "pinnedApps": [
         ],
         "position": "center",
@@ -303,12 +303,44 @@
     },
     "desktopWidgets": {
         "enabled": false,
-        "gridSnap": false,
-        "gridSnapScale": false,
+        "gridSnap": true,
+        "gridSnapScale": true,
         "monitorWidgets": [
             {
                 "name": "eDP-1",
                 "widgets": [
+                    {
+                        "hideMode": "visible",
+                        "id": "MediaPlayer",
+                        "roundedCorners": true,
+                        "scale": 1.2423866291864198,
+                        "showAlbumArt": true,
+                        "showBackground": true,
+                        "showButtons": true,
+                        "showVisualizer": true,
+                        "visualizerType": "linear",
+                        "x": 984,
+                        "y": 720
+                    },
+                    {
+                        "id": "Weather",
+                        "roundedCorners": true,
+                        "showBackground": true,
+                        "x": 120,
+                        "y": 312
+                    },
+                    {
+                        "clockColor": "none",
+                        "clockStyle": "digital",
+                        "customFont": "",
+                        "format": "HH:mm\\nd MMMM yyyy",
+                        "id": "Clock",
+                        "roundedCorners": true,
+                        "showBackground": true,
+                        "useCustomFont": false,
+                        "x": 48,
+                        "y": 96
+                    }
                 ]
             }
         ],
@@ -471,7 +503,7 @@
         "forced": false,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
-        "nightTemp": "4998"
+        "nightTemp": "5000"
     },
     "noctaliaPerformance": {
         "disableDesktopWidgets": true,

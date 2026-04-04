@@ -22,3 +22,6 @@ niri/local.kdl
 !Throne/config/
 !Throne/config/route_profiles/
 !Throne/config/route_profiles/**
+
+!lowfi/
+!lowfi/**

@@ -39,7 +39,7 @@ cursor {
 
 layout {
     gaps 10
-    center-focused-column "on-overflow"
+    center-focused-column "never"
     always-center-single-column
     preset-column-widths {
         proportion 0.33333
@@ -62,7 +62,7 @@ spawn-at-startup "xwayland-satellite"
 spawn-sh-at-startup "sleep 1 && noctalia-shell ipc call lockScreen lock"
 spawn-sh-at-startup "swayidle -w before-sleep \"noctalia-shell ipc call lockScreen lock\" &"
 
-spawn-sh-at-startup "sleep 1 && Throne"
+spawn-sh-at-startup "sleep 2 && Throne"
 
 hotkey-overlay {
     skip-at-startup
