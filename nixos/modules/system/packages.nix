@@ -16,12 +16,6 @@
       pciutils
       powertop
       fastfetch
-      bluetuith
       nixfmt-rfc-style    
-
-      gimp
-      qimgv
-      obs-studio
-      resources
     ];
 }

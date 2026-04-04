@@ -7,15 +7,9 @@
 {
   services.greetd = {
     enable = true;
-    settings = {
-      default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --autologin --cmd ${pkgs.niri}/bin/niri-session";
-        user = "greeter";
-      };
-      initial_session = {
-        command = "${pkgs.niri}/bin/niri-session";
-        user = "egor";
-      };
+    settings.default_session = {
+      command = "niri-session";
+      user = "egor";
     };
   };
 }

@@ -12,19 +12,17 @@
   programs.dconf.enable = true;
 
   services.upower.enable = true;
-  services.dbus.enable = true;
-  services.xserver.enable = true;
-  
+
   xdg.portal = {
     enable = true;
-    config.common.default = [
-      "gnome"
-      "gtk"
-    ];
+    xdgOpenUsePortal = true;
     extraPortals = [
-      pkgs.xdg-desktop-portal-gnome
       pkgs.xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal-gnome
     ];
+    config = {
+      common.default = [ "gnome" ];
+    };
   };
 
   services.pipewire = {
@@ -36,6 +34,11 @@
 
   security.rtkit.enable = true;
 
+  environment.sessionVariables = {
+    GTK_THEME = "Adwaita:dark";
+    QT_STYLE_OVERRIDE = "adwaita-dark";
+  };
+
   environment.systemPackages = lib.mkAfter (
     with pkgs;
     [
@@ -43,13 +46,20 @@
       noctalia.packages.${pkgs.system}.default
       swayidle
 
+      xwayland-satellite
+
       brightnessctl
       playerctl
       pamixer
 
       gnome-themes-extra
 
-      xwayland-satellite
+      nautilus
+      mpv
+      gimp
+      qimgv
+      obs-studio
+      resources
     ]
   );
 }

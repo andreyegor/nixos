@@ -4,7 +4,7 @@
   pkgsUnstable,
   ...
 }:
-{ 
+{
   users.users.egor = {
     isNormalUser = true;
     extraGroups = [
@@ -20,21 +20,26 @@
       scala
       scala-cli
       metals
-      go
-      postgresql
       direnv
+
+      go
+      (python3.withPackages (ps: with ps; [ pip ]))
+      postgresql
+
       act
       pandoc
       texlive.combined.scheme-full
+
       lowfi
+
       hoppscotch
-      android-studio
       discord
       pkgsUnstable.spotify
       yandex-music
       telegram-desktop
       onlyoffice-desktopeditors
-      (python3.withPackages (ps: with ps; [ pip ]))
+      
+      android-studio
       (pkgsUnstable.vscode.override {
         commandLineArgs = [
           "--enable-features=UseOzonePlatform"
