@@ -13,7 +13,8 @@ input {
     }
     
     mouse {
-        accel-speed -0.55
+        accel-profile "flat"
+        accel-speed -0.15
     }
 }
 
@@ -82,7 +83,7 @@ window-rule {
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+T { spawn "kitty"; }
+    Mod+S { spawn "kitty"; }
     Mod+Z { spawn "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
     Mod+L  { spawn "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
 

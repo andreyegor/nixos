@@ -124,19 +124,41 @@
                     "useCustomFont": false
                 },
                 {
+                    "compactMode": true,
+                    "diskPath": "/",
+                    "iconColor": "none",
+                    "id": "SystemMonitor",
+                    "showCpuCores": false,
+                    "showCpuFreq": false,
+                    "showCpuTemp": true,
+                    "showCpuUsage": true,
+                    "showDiskAvailable": false,
+                    "showDiskUsage": false,
+                    "showDiskUsageAsPercent": false,
+                    "showGpuTemp": false,
+                    "showLoadAverage": false,
+                    "showMemoryAsPercent": false,
+                    "showMemoryUsage": true,
+                    "showNetworkStats": false,
+                    "showSwapUsage": true,
+                    "textColor": "none",
+                    "useMonospaceFont": true,
+                    "usePadding": false
+                },
+                {
                     "compactMode": false,
                     "hideMode": "hidden",
                     "hideWhenIdle": false,
                     "id": "MediaMini",
-                    "maxWidth": 145,
+                    "maxWidth": 200,
                     "panelShowAlbumArt": true,
                     "scrollingMode": "hover",
                     "showAlbumArt": true,
                     "showArtistFirst": true,
                     "showProgressRing": true,
-                    "showVisualizer": false,
+                    "showVisualizer": true,
                     "textColor": "none",
-                    "useFixedWidth": false,
+                    "useFixedWidth": true,
                     "visualizerType": "linear"
                 }
             ],
@@ -421,7 +443,7 @@
                 "Up"
             ]
         },
-        "language": "",
+        "language": "en",
         "lockOnSuspend": true,
         "lockScreenAnimations": true,
         "lockScreenBlur": 0,

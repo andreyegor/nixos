@@ -38,8 +38,7 @@
       yandex-music
       telegram-desktop
       onlyoffice-desktopeditors
-      simulide
-      
+
       android-studio
       (pkgsUnstable.vscode.override {
         commandLineArgs = [
