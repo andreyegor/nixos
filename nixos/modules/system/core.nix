@@ -10,5 +10,4 @@
     "nix-command"
     "flakes"
   ];
-  hardware.opengl.enable = true;
 }
