@@ -10,6 +10,7 @@
   imports = [
     ./hardware-configuration.nix
     ./device.nix
+    ./programs.nix
 
     ../../modules/system/bluetooth.nix
     ../../modules/system/core.nix
