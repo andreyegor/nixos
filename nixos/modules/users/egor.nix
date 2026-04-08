@@ -31,14 +31,15 @@
       texlive.combined.scheme-full
 
       lowfi
+      ncspot
 
-      hoppscotch
       discord
       pkgsUnstable.spotify
       yandex-music
       telegram-desktop
       onlyoffice-desktopeditors
 
+      hoppscotch
       android-studio
       (pkgsUnstable.vscode.override {
         commandLineArgs = [
