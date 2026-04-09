@@ -164,6 +164,9 @@
             ],
             "right": [
                 {
+                    "id": "plugin:privacy-indicator"
+                },
+                {
                     "blacklist": [
                     ],
                     "chevronColor": "none",
