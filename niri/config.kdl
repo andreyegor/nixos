@@ -34,7 +34,7 @@ input {
 // }
 
 cursor {
-    xcursor-theme "Adwaita"
+    xcursor-theme "catppuccin-mocha-dark-cursors"
     xcursor-size 24
 }
 
