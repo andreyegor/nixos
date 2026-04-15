@@ -10,7 +10,7 @@
   programs.niri.enable = true;
   programs.xwayland.enable = true;
   programs.dconf.enable = true;
-
+  
   services.upower.enable = true;
 
   xdg.portal = {
@@ -47,8 +47,6 @@
       kitty
       noctalia.packages.${pkgs.system}.default
       swayidle
-
-      xwayland-satellite
 
       brightnessctl
       playerctl

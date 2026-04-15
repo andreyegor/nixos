@@ -27,7 +27,9 @@
       postgresql
 
       act
+      quarto
       pandoc
+      corefonts
       texlive.combined.scheme-full
 
       lowfi
