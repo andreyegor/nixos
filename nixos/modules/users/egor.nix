@@ -23,13 +23,22 @@
       direnv
 
       go
-      (python3.withPackages (ps: with ps; [ pip ]))
+      (python3.withPackages (
+        ps: with ps; [
+          pip
+          numpy
+          matplotlib
+          jupyter
+          ipykernel
+          pyzmq
+          pyyaml
+        ]
+      ))
       postgresql
 
       act
       quarto
       pandoc
-      corefonts
       texlive.combined.scheme-full
 
       lowfi

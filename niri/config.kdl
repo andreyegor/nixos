@@ -58,10 +58,11 @@ layout {
 }
 
 spawn-at-startup "noctalia-shell"
+spawn-at-startup "xwayland-satellite"
 spawn-sh-at-startup "sleep 1 && noctalia-shell ipc call lockScreen lock"
 spawn-sh-at-startup "swayidle -w before-sleep \"noctalia-shell ipc call lockScreen lock\" &"
 
-spawn-sh-at-startup "sleep 2 && Throne"
+spawn-sh-at-startup "sleep 3 && Throne"
 
 hotkey-overlay {
     skip-at-startup

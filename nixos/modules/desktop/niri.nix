@@ -48,6 +48,8 @@
       noctalia.packages.${pkgs.system}.default
       swayidle
 
+      xwayland-satellite
+
       brightnessctl
       playerctl
       pamixer
