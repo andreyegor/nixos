@@ -35,6 +35,8 @@
         ]
       ))
       postgresql
+      rustc
+      cargo
 
       act
       quarto
@@ -44,12 +46,14 @@
       lowfi
       ncspot
 
+      discord
       vesktop
       pkgsUnstable.spotify
       yandex-music
       telegram-desktop
       onlyoffice-desktopeditors
 
+      zed-editor
       hoppscotch
       android-studio
       (pkgsUnstable.vscode.override {

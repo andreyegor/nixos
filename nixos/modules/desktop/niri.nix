@@ -8,9 +8,8 @@
 
 {
   programs.niri.enable = true;
-  programs.xwayland.enable = true;
   programs.dconf.enable = true;
-  
+
   services.upower.enable = true;
 
   xdg.portal = {
@@ -34,11 +33,12 @@
 
   security.rtkit.enable = true;
 
-  environment.sessionVariables = {
-    XCURSOR_THEME = "catppuccin-mocha-dark-cursors";
-    XCURSOR_SIZE = "24";
+  environment.variables = {
     GTK_THEME = "Adwaita:dark";
     QT_STYLE_OVERRIDE = "adwaita-dark";
+
+    XCURSOR_THEME = "catppuccin-mocha-dark-cursors";
+    XCURSOR_SIZE = "24";
   };
 
   environment.systemPackages = lib.mkAfter (
