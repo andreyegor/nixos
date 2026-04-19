@@ -47,7 +47,6 @@
       lowfi
       ncspot
 
-      discord
       vesktop
       pkgsUnstable.spotify
       yandex-music
