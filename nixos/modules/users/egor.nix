@@ -37,6 +37,7 @@
       postgresql
       rustc
       cargo
+      beam26Packages.elixir
 
       act
       quarto

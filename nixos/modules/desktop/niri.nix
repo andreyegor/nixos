@@ -33,12 +33,9 @@
 
   security.rtkit.enable = true;
 
-  environment.variables = {
+  environment.sessionVariables = {
     GTK_THEME = "Adwaita:dark";
     QT_STYLE_OVERRIDE = "adwaita-dark";
-
-    XCURSOR_THEME = "catppuccin-mocha-dark-cursors";
-    XCURSOR_SIZE = "24";
   };
 
   environment.systemPackages = lib.mkAfter (
@@ -56,6 +53,7 @@
 
       gnome-themes-extra
       catppuccin-cursors.mochaDark
+      bibata-cursors
 
       nautilus
       mpv
