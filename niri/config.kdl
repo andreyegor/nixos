@@ -55,14 +55,19 @@ layout {
         off
         width 4
     }
+    background-color "transparent"
 }
 
-spawn-at-startup "noctalia-shell"
-spawn-at-startup "xwayland-satellite"
-spawn-sh-at-startup "sleep 1 && noctalia-shell ipc call lockScreen lock"
-spawn-sh-at-startup "swayidle -w before-sleep \"noctalia-shell ipc call lockScreen lock\" &"
+layer-rule {
+  match namespace="^noctalia-wallpaper*"
+  place-within-backdrop true
+}
 
-spawn-sh-at-startup "sleep 3 && Throne"
+overview {
+  workspace-shadow {
+    off
+  }
+}
 
 hotkey-overlay {
     skip-at-startup
@@ -79,6 +84,13 @@ window-rule {
     geometry-corner-radius 10
     clip-to-geometry true
 }
+
+spawn-at-startup "noctalia-shell"
+spawn-at-startup "xwayland-satellite"
+spawn-sh-at-startup "sleep 1 && noctalia-shell ipc call lockScreen lock"
+spawn-sh-at-startup "swayidle -w before-sleep \"noctalia-shell ipc call lockScreen lock\" &"
+
+spawn-sh-at-startup "sleep 3 && Throne"
 
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }

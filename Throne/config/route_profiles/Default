@@ -1,5 +1,5 @@
 {
-    "current_route_id": 0,
+    "current_route_id": 1,
     "direct_dns": "localhost",
     "direct_dns_strategy": "ipv4_only",
     "dns_final_out": "direct",
