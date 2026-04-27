@@ -2,6 +2,7 @@
   config,
   pkgs,
   pkgsUnstable,
+  meowdo,
   ...
 }:
 {
@@ -44,8 +45,9 @@
       pandoc
       texlive.combined.scheme-full
 
+      meowdo.packages.${pkgs.system}.default
       lowfi
-      ncspot
+      spotify-player
 
       vesktop
       pkgsUnstable.spotify

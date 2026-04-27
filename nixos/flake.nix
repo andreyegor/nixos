@@ -8,6 +8,7 @@
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    meowdo.url = "github:Sycorlax/Meowdo";
   };
 
   outputs =
@@ -16,6 +17,7 @@
       nixpkgs,
       unstable,
       noctalia,
+      meowdo,
       ...
     }:
     let
@@ -35,7 +37,7 @@
         inherit system;
 
         specialArgs = {
-          inherit pkgsUnstable noctalia;
+          inherit pkgsUnstable noctalia meowdo;
         };
 
         modules = [

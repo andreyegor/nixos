@@ -54,7 +54,8 @@
             "domain_suffix": [
                 "nixos.org",
                 "noctalia.dev",
-                "easyeda.com"
+                "easyeda.com",
+                "danilapoperechnyi.com"
             ],
             "invert": false,
             "ip_is_private": false,
