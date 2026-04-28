@@ -10,6 +10,7 @@
     isNormalUser = true;
     extraGroups = [
       "wheel"
+      "storage"
       "docker"
     ];
     shell = pkgs.fish;

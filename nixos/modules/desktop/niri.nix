@@ -10,6 +10,8 @@
   programs.niri.enable = true;
   programs.dconf.enable = true;
 
+  services.udisks2.enable = true;
+  services.gvfs.enable = true;
   services.upower.enable = true;
 
   xdg.portal = {
@@ -50,11 +52,13 @@
       brightnessctl
       playerctl
       pamixer
+      udiskie
 
       gnome-themes-extra
       catppuccin-cursors.mochaDark
       bibata-cursors
-
+      
+      yazi
       nautilus
       mpv
       gimp
