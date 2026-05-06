@@ -17,10 +17,8 @@ input {
         accel-speed -0.15
     }
 }
-
-cursor {
-    xcursor-theme "catppuccin-mocha-dark-cursors"
-    xcursor-size 24
+environment {
+    QT_QPA_PLATFORMTHEME "gtk3"
 }
 
 layout {
@@ -63,6 +61,11 @@ window-rule {
     match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
     default-floating-position x=10 y=10 relative-to="bottom-right"
     open-focused false
+}
+
+window-rule {
+    match app-id="jetbrains-studio" title="Add File to Git" title="Confirm Exit" title="Keep All Changes?" title="Rename" title="Delete"
+    open-floating true
 }
 
 window-rule {

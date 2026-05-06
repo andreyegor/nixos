@@ -25,3 +25,6 @@ niri/local.kdl
 
 !lowfi/
 !lowfi/**
+
+!home-manager
+!home-manager/**

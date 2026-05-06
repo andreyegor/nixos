@@ -12,6 +12,7 @@
       "wheel"
       "storage"
       "docker"
+      "kvm"
     ];
     shell = pkgs.fish;
     packages = with pkgs; [
@@ -51,13 +52,16 @@
       spotify-player
 
       vesktop
+      prismlauncher
       pkgsUnstable.spotify
       yandex-music
       telegram-desktop
       onlyoffice-desktopeditors
 
+      appflowy
       zed-editor
       hoppscotch
+      android-tools
       android-studio
       (pkgsUnstable.vscode.override {
         commandLineArgs = [

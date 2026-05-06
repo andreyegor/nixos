@@ -9,6 +9,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     meowdo.url = "github:Sycorlax/Meowdo";
+    home-manager.url = "github:nix-community/home-manager/release-25.11";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -18,6 +20,7 @@
       unstable,
       noctalia,
       meowdo,
+      home-manager,
       ...
     }:
     let
@@ -42,6 +45,14 @@
 
         modules = [
           ./hosts/laptop-ga401qm
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+
+            home-manager.users.egor = import ./home/home.nix;
+          }
         ];
       };
     };
