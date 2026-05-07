@@ -8,10 +8,6 @@
 !cosmic/
 !cosmic/**
 
-!niri/
-!niri/**
-niri/local.kdl
-
 !noctalia/
 !noctalia/**
 
@@ -25,6 +21,3 @@ niri/local.kdl
 
 !lowfi/
 !lowfi/**
-
-!home-manager
-!home-manager/**

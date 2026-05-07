@@ -4,13 +4,15 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
-    noctalia = {
-      url = "github:noctalia-dev/noctalia-shell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    meowdo.url = "github:Sycorlax/Meowdo";
     home-manager.url = "github:nix-community/home-manager/release-25.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    niri.url = "github:sodiboo/niri-flake";
+    niri.inputs.nixpkgs.follows = "nixpkgs";
+    noctalia.url = "github:noctalia-dev/noctalia-shell";
+    noctalia.inputs.nixpkgs.follows = "nixpkgs";
+    catppuccin.url = "github:catppuccin/nix/v1.1.0";
+    catppuccin.inputs.nixpkgs.follows = "nixpkgs";
+    meowdo.url = "github:Sycorlax/Meowdo";
   };
 
   outputs =
@@ -18,9 +20,11 @@
       self,
       nixpkgs,
       unstable,
-      noctalia,
-      meowdo,
       home-manager,
+      niri,
+      noctalia,
+      catppuccin,
+      meowdo,
       ...
     }:
     let
@@ -40,7 +44,12 @@
         inherit system;
 
         specialArgs = {
-          inherit pkgsUnstable noctalia meowdo;
+          inherit
+            pkgsUnstable
+            niri
+            noctalia
+            meowdo
+            ;
         };
 
         modules = [
@@ -50,8 +59,18 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-
             home-manager.users.egor = import ./home/home.nix;
+
+            home-manager.extraSpecialArgs = {
+              hostName = "laptop-ga401qm";
+              inherit pkgsUnstable;
+            };
+
+            home-manager.sharedModules = [
+              niri.homeModules.niri
+              noctalia.homeModules.default
+              catppuccin.homeManagerModules.catppuccin 
+            ];
           }
         ];
       };
