@@ -7,9 +7,6 @@
 }:
 
 {
-  programs.niri.enable = true;
-  programs.dconf.enable = true;
-
   services.udisks2.enable = true;
   services.gvfs.enable = true;
   services.upower.enable = true;
@@ -34,37 +31,4 @@
   };
 
   security.rtkit.enable = true;
-
-  environment.sessionVariables = {
-    GTK_THEME = "Adwaita:dark";
-    QT_STYLE_OVERRIDE = "adwaita-dark";
-  };
-
-  environment.systemPackages = lib.mkAfter (
-    with pkgs;
-    [
-      kitty
-      noctalia.packages.${pkgs.system}.default
-      swayidle
-
-      xwayland-satellite
-
-      brightnessctl
-      playerctl
-      pamixer
-      udiskie
-
-      gnome-themes-extra
-      catppuccin-cursors.mochaDark
-      bibata-cursors
-      
-      yazi
-      nautilus
-      mpv
-      gimp
-      qimgv
-      obs-studio
-      resources
-    ]
-  );
 }

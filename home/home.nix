@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./modules/packages/default.nix
     ./modules/appearance/default.nix
     ./hosts/${hostName}/default.nix
   ];
