@@ -26,7 +26,7 @@
         allowPasswordWithFprintd = true;
         clockStyle = "custom";
         clockFormat = "hh\\nmm";
-        dimmerOpacity = 0.2;
+        dimmerOpacity = 0.0;
         smoothScrollEnabled = true;
         showSessionButtonsOnLockScreen = false;
         enableLockScreenCountdown = false;
@@ -56,6 +56,7 @@
         enableClipPreview = true;
         enableClipboardChips = true;
         enableClipboardSmartIcons = true;
+        enableSettingsSearch = false;
         overviewLayer = true;
       };
 
@@ -344,6 +345,7 @@
 
       sessionMenu = {
         position = "top_right";
+        largeButtonsStyle = false;
         showHeader = true;
         showKeybinds = false;
         enableCountdown = false;
@@ -405,6 +407,7 @@
         panelsAttachedToBar = true;
         tooltipsEnabled = true;
         translucentWidgets = false;
+        panelBackgroundOpacity = 1.0;
       };
 
       wallpaper = {
