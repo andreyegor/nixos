@@ -41,10 +41,11 @@ in
     cargo
     beam26Packages.elixir
 
-    direnv
     act
     android-tools
     android-studio
+    
+    direnv
 
     quarto
     pandoc
@@ -65,11 +66,9 @@ in
     pkgsUnstable.spotify
     yandex-music
 
-    vesktop
     telegram-desktop
 
     prismlauncher
-    onlyoffice-desktopeditors
     appflowy
   ];
 }

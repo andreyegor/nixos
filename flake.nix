@@ -69,7 +69,7 @@
             home-manager.sharedModules = [
               niri.homeModules.niri
               noctalia.homeModules.default
-              catppuccin.homeManagerModules.catppuccin 
+              catppuccin.homeModules.catppuccin 
             ];
           }
         ];
