@@ -222,6 +222,10 @@
         };
       };
 
+      dock = {
+        enabled = false;
+      };
+
       controlCenter = {
         position = "close_to_bar_button";
         diskPath = "/";

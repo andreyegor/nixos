@@ -1,6 +1,6 @@
 {
   "HDMI-A-1" = {
-    mode = { width = 1920; height = 1080; refresh = 165.002; };
+    mode = { width = 1920; height = 1080; refresh = 144.106; };
     variable-refresh-rate = true;
     scale = 1.0;
     position = { x = -1920; y = -99; };
