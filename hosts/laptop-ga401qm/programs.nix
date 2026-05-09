@@ -7,7 +7,7 @@
 {
   services.ollama = {
     enable = true;
-    package = pkgsUnstable.ollama-cuda;
+    # package = pkgsUnstable.ollama-cuda;
     # Optional: preload models, see https://ollama.com/library
     loadModels = [
       "nemotron-3-nano:4b"
