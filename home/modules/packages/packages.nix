@@ -16,6 +16,8 @@ let
 in
 {
   home.packages = with pkgs; [
+    gh
+
     sbt
     mill
     gradle
@@ -44,7 +46,7 @@ in
     act
     android-tools
     android-studio
-    
+
     direnv
 
     quarto

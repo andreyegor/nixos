@@ -63,6 +63,7 @@
       audio = {
         spectrumFrameRate = 30;
         visualizerType = "linear";
+        spectrumMirrored = false;
         volumeStep = 5;
         volumeOverdrive = false;
         volumeFeedback = false;

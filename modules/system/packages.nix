@@ -7,9 +7,9 @@
 {
   environment.systemPackages = with pkgs;
     [
-      gh
       gcc
       tree
+      yazi
       micro
       wget
       usbutils
