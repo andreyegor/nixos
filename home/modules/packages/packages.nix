@@ -17,6 +17,7 @@ in
 {
   home.packages = with pkgs; [
     gh
+    xxh
 
     sbt
     mill
