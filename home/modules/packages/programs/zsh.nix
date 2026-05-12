@@ -7,6 +7,7 @@
     syntaxHighlighting.enable = true;
     history.size = 10000;
     initContent = ''
+      clear
       fastfetch --structure OS:Uptime:WM:Shell:Terminal --logo-type small
     '';
 
