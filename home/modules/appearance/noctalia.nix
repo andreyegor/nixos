@@ -11,7 +11,7 @@
       settingsVersion = 59;
 
       general = {
-        avatarImage = "/home/egor/Pictures/me.jpg";
+        avatarImage = "/home/egor/.config/nixos/res/images/me.jpg";
         language = "en";
         telemetryEnabled = false;
         animationSpeed = 1;
@@ -417,7 +417,7 @@
 
       wallpaper = {
         enabled = true;
-        directory = "/home/egor/Pictures/Wallpapers";
+        directory = "/home/egor/.config/nixos/res/images/wallpapers";
         fillMode = "crop";
         wallpaperChangeMode = "random";
         sortOrder = "date_desc";
