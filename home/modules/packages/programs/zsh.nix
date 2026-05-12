@@ -5,7 +5,6 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-    history.size = 10000;
     initContent = ''
       clear
       fastfetch --structure OS:Uptime:WM:Shell:Terminal --logo-type small
@@ -30,8 +29,16 @@
       theme = "agnoster";
       extraConfig = ''
         ENABLE_CORRECTION="true"
+        CORRECT_IGNORE='_*'
+        setopt NO_HUP
       '';
     };
+
+    history = {
+        size = 10000;
+        ignoreDups = true;
+        share = true;  
+      };
 
     plugins = [
       {
