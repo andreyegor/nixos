@@ -17,7 +17,7 @@
         "scala"
         "python"
         "docker"
-        
+
         "z"
         "sudo"
         "vscode"
@@ -30,15 +30,14 @@
       extraConfig = ''
         ENABLE_CORRECTION="true"
         CORRECT_IGNORE='_*'
-        setopt NO_HUP
       '';
     };
 
     history = {
-        size = 10000;
-        ignoreDups = true;
-        share = true;  
-      };
+      size = 10000;
+      ignoreDups = true;
+      share = true;
+    };
 
     plugins = [
       {

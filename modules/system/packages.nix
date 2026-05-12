@@ -10,6 +10,7 @@
       gcc
       tree
       yazi
+      nixd
       micro
       wget
       usbutils
