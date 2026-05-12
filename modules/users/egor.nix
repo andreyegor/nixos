@@ -13,12 +13,7 @@
       "docker"
       "kvm"
     ];
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
   };
-  programs.fish = {
-      enable = true;
-      interactiveShellInit = ''
-        direnv hook fish | source
-      '';
-    };
+  programs.zsh.enable = true;
 }
