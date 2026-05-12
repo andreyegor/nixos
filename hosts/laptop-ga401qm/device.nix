@@ -1,10 +1,4 @@
 {
-  config,
-  pkgs,
-  ...
-}:
-
-{
   hardware.nvidia.prime.amdgpuBusId = "PCI:4:0:0";
   hardware.nvidia.prime.nvidiaBusId = "PCI:1:0:0";
   hardware.nvidia.prime.offload.enable = true;

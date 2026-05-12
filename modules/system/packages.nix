@@ -1,22 +1,19 @@
 {
-  config,
   pkgs,
-  lib,
   ...
 }:
 {
-  environment.systemPackages = with pkgs;
-    [
-      gcc
-      tree
-      yazi
-      nixd
-      micro
-      wget
-      usbutils
-      pciutils
-      powertop
-      fastfetch
-      nixfmt-rfc-style    
-    ];
+  environment.systemPackages = with pkgs; [
+    gcc
+    tree
+    yazi
+    nixd
+    micro
+    wget
+    usbutils
+    pciutils
+    powertop
+    fastfetch
+    nixfmt-rfc-style
+  ];
 }

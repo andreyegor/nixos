@@ -1,5 +1,3 @@
-{ pkgs, ... }:
-
 {
   xdg.desktopEntries.scalar = {
     name = "Scalar";

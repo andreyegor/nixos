@@ -1,10 +1,4 @@
 {
-  config,
-  pkgs,
-  pkgsUnstable,
-  ...
-}:
-{
   programs = {
     git.enable = true;
     firefox.enable = true;
@@ -16,5 +10,8 @@
       enable = true;
       nix-direnv.enable = true;
     };
+  };
+  home.sessionVariables = {
+    MOZ_ENABLE_WAYLAND = 1;
   };
 }

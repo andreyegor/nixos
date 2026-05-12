@@ -3,17 +3,6 @@
   pkgsUnstable,
   ...
 }:
-let
-  scalarAppImage = pkgs.fetchurl {
-    url = "https://github.com/scalar/scalar/releases/download/v1.0.5/scalar-app-1.0.5x86_64.AppImage";
-    sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
-  };
-
-  scalar = pkgs.appimageTools.wrapType2 {
-    name = "scalar";
-    src = scalarAppImage;
-  };
-in
 {
   home.packages = with pkgs; [
     gh
@@ -72,4 +61,8 @@ in
     prismlauncher
     appflowy
   ];
+
+  home.sessionVariables = {
+    WEBKIT_DISABLE_DMABUF_RENDERER = 1;
+  };
 }

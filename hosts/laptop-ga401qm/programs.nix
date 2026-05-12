@@ -1,14 +1,11 @@
 {
-  config,
   pkgs,
-  pkgsUnstable,
   ...
 }:
 {
   services.ollama = {
     enable = true;
-    # package = pkgsUnstable.ollama-cuda;
-    # Optional: preload models, see https://ollama.com/library
+    package = pkgs.ollama-cuda;
     loadModels = [
       "nemotron-3-nano:4b"
       "llama3.1:8b"

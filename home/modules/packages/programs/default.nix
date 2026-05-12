@@ -1,5 +1,3 @@
-{ ... }:
-
 {
   imports = [
     ./other.nix
