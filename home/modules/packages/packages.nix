@@ -47,8 +47,6 @@ in
     android-tools
     android-studio
 
-    direnv
-
     quarto
     pandoc
     texlive.combined.scheme-full
