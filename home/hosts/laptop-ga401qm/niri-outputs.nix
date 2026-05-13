@@ -27,14 +27,14 @@
   };
   "DP-1" = {
     mode = {
-      width = 2560;
-      height = 1440;
-      refresh = 59.951;
+      width = 1920;
+      height = 1080;
+      refresh = 119.879;
     };
-    scale = 1.5;
+    scale = 1;
     position = {
-      x = 0;
-      y = -1080;
+      x = -1920;
+      y = -99;
     };
   };
 }
