@@ -47,6 +47,7 @@
         "--ozone-platform=wayland"
       ];
     })
+    claude-code
 
     appimage-run
 
