@@ -11,7 +11,7 @@
     sbt
     mill
     gradle
-    javaPackages.compiler.temurin-bin.jdk-25
+    javaPackages.compiler.temurin-bin.jdk-21
     scala
     scala-cli
     metals
