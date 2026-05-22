@@ -4,7 +4,6 @@
     firefox.enable = true;
     vesktop.enable = true;
     onlyoffice.enable = true;
-    zed-editor.enable = true;
     spotify-player.enable = true;
     direnv = {
       enable = true;
