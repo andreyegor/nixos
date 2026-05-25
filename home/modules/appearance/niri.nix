@@ -224,12 +224,24 @@
           "Mod+Right".action = {
             focus-column-right = { };
           };
+          "Mod+Up".action = {
+            focus-window-up = { };
+          };
+          "Mod+Down".action = {
+            focus-window-down = { };
+          };
 
           "Mod+Shift+Left".action = {
             move-column-left = { };
           };
           "Mod+Shift+Right".action = {
             move-column-right = { };
+          };
+          "Mod+Shift+Up".action = {
+            move-window-up = { };
+          };
+          "Mod+Shift+Down".action = {
+            move-window-down = { };
           };
 
           "Mod+Home".action = {
@@ -265,16 +277,24 @@
             move-column-to-monitor-right = { };
           };
 
-          "Mod+Down".action = {
+          "Mod+Alt+Down".action = {
             focus-workspace-down = { };
           };
-          "Mod+Up".action = {
+          "Mod+Alt+Up".action = {
             focus-workspace-up = { };
           };
-          "Mod+Shift+Down".action = {
+          
+          "Mod+Alt+Right".action = {
+            consume-or-expel-window-right = { };
+          };
+          "Mod+Alt+Left".action = {
+            consume-or-expel-window-left = { };
+          };
+
+          "Mod+Shift+Alt+Down".action = {
             move-column-to-workspace-down = { };
           };
-          "Mod+Shift+Up".action = {
+          "Mod+Shift+Alt+Up".action = {
             move-column-to-workspace-up = { };
           };
 
@@ -364,31 +384,31 @@
             focus-workspace = 9;
           };
 
-          "Mod+Ctrl+1".action = {
+          "Mod+Shift+1".action = {
             move-column-to-workspace = 1;
           };
-          "Mod+Ctrl+2".action = {
+          "Mod+Shift+2".action = {
             move-column-to-workspace = 2;
           };
-          "Mod+Ctrl+3".action = {
+          "Mod+Shift+3".action = {
             move-column-to-workspace = 3;
           };
-          "Mod+Ctrl+4".action = {
+          "Mod+Shift+4".action = {
             move-column-to-workspace = 4;
           };
-          "Mod+Ctrl+5".action = {
+          "Mod+Shift+5".action = {
             move-column-to-workspace = 5;
           };
-          "Mod+Ctrl+6".action = {
+          "Mod+Shift+6".action = {
             move-column-to-workspace = 6;
           };
-          "Mod+Ctrl+7".action = {
+          "Mod+Shift+7".action = {
             move-column-to-workspace = 7;
           };
-          "Mod+Ctrl+8".action = {
+          "Mod+Shift+8".action = {
             move-column-to-workspace = 8;
           };
-          "Mod+Ctrl+9".action = {
+          "Mod+Shift+9".action = {
             move-column-to-workspace = 9;
           };
 
