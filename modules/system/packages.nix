@@ -9,6 +9,7 @@
     yazi
     nixd
     micro
+    wl-clipboard
     wget
     usbutils
     pciutils
