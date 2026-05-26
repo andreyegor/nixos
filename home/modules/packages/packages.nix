@@ -52,6 +52,7 @@
     appimage-run
 
     hoppscotch
+    insomnia
 
     lowfi
     pkgsUnstable.spotify
