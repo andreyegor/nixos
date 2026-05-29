@@ -497,7 +497,7 @@
       hide_window_decorations = "yes";
       window_padding_width = 8;
     };
-    font.name = "fira-code";
+    font.name = "FiraCode Nerd Font Mono";
   };
 
   home.packages = with pkgs; [

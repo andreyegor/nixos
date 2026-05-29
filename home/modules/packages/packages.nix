@@ -58,6 +58,7 @@
     pkgsUnstable.spotify
     yandex-music
 
+    signal-desktop
     telegram-desktop
 
     prismlauncher

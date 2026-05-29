@@ -6,8 +6,11 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     initContent = ''
-      clear
-      fastfetch --structure OS:Uptime:WM:Shell:Terminal --logo-type small
+      echo -en "\033[6n" > /dev/tty
+      IFS='[;' read -r -d R -s _ row _ < /dev/tty 2>/dev/null
+      if [[ "$row" -eq 1 ]]; then
+        fastfetch --structure OS:Uptime:WM:Shell:Terminal --logo-type small
+      fi
     '';
 
     oh-my-zsh = {
