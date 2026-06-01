@@ -31,7 +31,7 @@
     postgresql
     rustc
     cargo
-    beam26Packages.elixir
+    beam27Packages.elixir
 
     act
     android-tools

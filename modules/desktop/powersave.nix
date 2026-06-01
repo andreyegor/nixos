@@ -19,8 +19,8 @@
     HandleLidSwitchDocked = "suspend";
     HandleLidSwitchExternalPower = "suspend";
   };
-  systemd.sleep.extraConfig = ''
-    HibernateDelaySec=4h
-    SuspendState=mem
-  '';
+  systemd.sleep.settings.Sleep = {
+    HibernateDelaySec = "4h";
+    SuspendState = "mem";
+  };
 }
