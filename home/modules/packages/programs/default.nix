@@ -3,7 +3,7 @@
     ./other.nix
     ./zsh.nix
     ./zed.nix
-    ./lazyvim.nix
+    ./neovim.nix
     ./opencode.nix
   ];
 }
