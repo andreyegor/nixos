@@ -54,6 +54,8 @@
     hoppscotch
     insomnia
 
+    figma-linux
+
     lowfi
     pkgsUnstable.spotify
     yandex-music

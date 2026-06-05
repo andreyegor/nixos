@@ -12,7 +12,7 @@
     noctalia.inputs.nixpkgs.follows = "nixpkgs";
     catppuccin.url = "github:catppuccin/nix/release-26.05";
     catppuccin.inputs.nixpkgs.follows = "nixpkgs";
-    meowdo.url = "github:Sycorlax/Meowdo";
+    nixvim.url = "github:nix-community/nixvim";
   };
 
   outputs =
@@ -24,7 +24,7 @@
       niri,
       noctalia,
       catppuccin,
-      meowdo,
+      nixvim,
       ...
     }:
     let
@@ -48,7 +48,6 @@
             pkgsUnstable
             niri
             noctalia
-            meowdo
             ;
         };
 
@@ -69,7 +68,8 @@
             home-manager.sharedModules = [
               niri.homeModules.niri
               noctalia.homeModules.default
-              catppuccin.homeModules.catppuccin 
+              nixvim.homeModules.nixvim
+              catppuccin.homeModules.catppuccin
             ];
           }
         ];
