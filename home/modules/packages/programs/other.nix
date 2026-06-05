@@ -1,7 +1,11 @@
+{ config, ... }:
 {
   programs = {
     git.enable = true;
-    firefox.enable = true;
+    firefox = {
+      enable = true;
+      configPath = "${config.xdg.configHome}/mozilla/firefox";
+    };
     vesktop.enable = true;
     onlyoffice.enable = true;
     spotify-player.enable = true;
