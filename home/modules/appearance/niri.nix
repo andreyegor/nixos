@@ -283,7 +283,7 @@
           "Mod+Alt+Up".action = {
             focus-workspace-up = { };
           };
-          
+
           "Mod+Alt+Right".action = {
             consume-or-expel-window-right = { };
           };
@@ -496,6 +496,9 @@
     settings = {
       hide_window_decorations = "yes";
       window_padding_width = 8;
+      cursor_trail = 1;
+      cursor_trail_decay = "0.1 0.2";
+      cursor_trail_start_threshold = 2;
     };
     font.name = "FiraCode Nerd Font Mono";
   };
