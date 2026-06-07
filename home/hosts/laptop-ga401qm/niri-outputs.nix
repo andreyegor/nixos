@@ -8,8 +8,8 @@
     variable-refresh-rate = true;
     scale = 1.0;
     position = {
-      x = -1920;
-      y = -99;
+      x = 1;
+      y = 0;
     };
   };
   "eDP-1" = {
