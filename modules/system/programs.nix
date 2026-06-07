@@ -14,7 +14,6 @@
     throne = {
       enable = true;
       tunMode.enable = true;
-      package = pkgsUnstable.throne;
     };
   };
 }
