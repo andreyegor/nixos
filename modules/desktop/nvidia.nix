@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgsUnstable,
   ...
 }:
 
@@ -10,7 +11,8 @@
     open = false;
     modesetting.enable = true;
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    package =
+      (pkgsUnstable.linuxPackagesFor config.boot.kernelPackages.kernel).nvidiaPackages.new_feature;
   };
   nixpkgs.config.nvidia.acceptLicense = true;
   nixpkgs.config.allowUnfreePredicate =

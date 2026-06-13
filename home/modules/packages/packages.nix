@@ -40,6 +40,7 @@
     quarto
     pandoc
     texlive.combined.scheme-full
+    libreoffice
 
     (pkgsUnstable.vscode.override {
       commandLineArgs = [

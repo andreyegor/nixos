@@ -3,7 +3,14 @@
   programs.nixvim = {
     enable = true;
     defaultEditor = true;
-    opts.mouse = "a";
+
+    opts = {
+      mouse = "a";
+      clipboard = "unnamedplus";
+      number = true;
+    };
+
+    globals.mapleader = " ";
 
     colorschemes.catppuccin = {
       enable = true;
@@ -17,6 +24,7 @@
       neo-tree.enable = true;
       noice.enable = true;
       notify.enable = true;
+      wilder.enable = true;
       which-key.enable = true;
       dashboard.enable = true;
       web-devicons.enable = true;
@@ -115,6 +123,7 @@
         scalafmt
       ];
     };
+
     # Extra Config
     extraConfigLua = ''
       vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { noremap = true })
