@@ -3,7 +3,7 @@
     ./other.nix
     ./zsh.nix
     ./zed.nix
-    ./neovim.nix
+    ./editor.nix
     ./opencode.nix
   ];
 }

@@ -2,7 +2,6 @@
 {
   programs.nixvim = {
     enable = true;
-    defaultEditor = true;
 
     opts = {
       mouse = "a";
