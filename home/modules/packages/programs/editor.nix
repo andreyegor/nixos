@@ -1,5 +1,9 @@
-{ pkgs, ... }:
-{
+{ pkgs, ... }: {
+  home.packages = with pkgs; [
+    lazygit
+    ripgrep
+    fd
+  ];
   programs.zellij = {
     enable = true;
     settings = {
@@ -8,6 +12,33 @@
       copy_command = "wl-copy";
       mouse_mode = true;
     };
+  };
+  programs.yazi = {
+    enable = true;
+    shellWrapperName = "y";
+
+    plugins = {
+      git = pkgs.yaziPlugins.git;
+    };
+
+    initLua = ''
+      require("git"):setup()
+    '';
+
+    settings.plugin.prepend_fetchers = [
+      {
+        id = "git";
+        url = "*";
+        run = "git";
+        group = "0";
+      }
+      {
+        id = "git";
+        url = "*/";
+        run = "git";
+        group = "0";
+      }
+    ];
   };
   programs.helix = {
     enable = true;
@@ -24,6 +55,7 @@
         cursorline = true;
         true-color = true;
         completion-trigger-len = 1;
+        default-yank-register = "+";
 
         cursor-shape = {
           normal = "block";
@@ -117,7 +149,7 @@
         }
         {
           name = "scala";
-          auto-format = true;
+          auto-format = false;
           formatter = {
             command = "scalafmt";
             args = [ "--stdin" ];
@@ -133,11 +165,6 @@
     };
 
     extraPackages = with pkgs; [
-      # tools
-      lazygit
-      ripgrep
-      fd
-      yazi
       # LSP
       nixd
       rust-analyzer

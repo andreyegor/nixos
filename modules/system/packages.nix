@@ -6,7 +6,6 @@
   environment.systemPackages = with pkgs; [
     gcc
     tree
-    yazi
     nixd
     micro
     wl-clipboard
