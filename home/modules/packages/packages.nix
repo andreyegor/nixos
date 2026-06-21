@@ -66,6 +66,7 @@
 
     prismlauncher
     appflowy
+    anydesk
   ];
 
   home.sessionVariables = {

@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   home.packages = with pkgs; [
     lazygit
     ripgrep
@@ -54,8 +54,10 @@
         color-modes = true;
         cursorline = true;
         true-color = true;
+        auto-completion = true;
         completion-trigger-len = 1;
         default-yank-register = "+";
+        soft-wrap.enable = true;
 
         cursor-shape = {
           normal = "block";
@@ -81,7 +83,7 @@
             "file-modification-indicator"
             "file-encoding"
           ];
-          center = [ "diagnostics" ];
+          center = ["diagnostics"];
           right = [
             "mode"
             "position"
@@ -110,12 +112,12 @@
           name = "nix";
           auto-format = true;
           formatter.command = "alejandra";
-          language-servers = [ "nixd" ];
+          language-servers = ["nixd"];
         }
         {
           name = "rust";
           auto-format = true;
-          language-servers = [ "rust-analyzer" ];
+          language-servers = ["rust-analyzer"];
         }
         {
           name = "c";
@@ -123,7 +125,7 @@
           formatter = {
             command = "clang-format";
           };
-          language-servers = [ "clangd" ];
+          language-servers = ["clangd"];
         }
         {
           name = "cpp";
@@ -131,30 +133,30 @@
           formatter = {
             command = "clang-format";
           };
-          language-servers = [ "clangd" ];
+          language-servers = ["clangd"];
         }
         {
           name = "kotlin";
           auto-format = true;
           formatter = {
             command = "ktfmt";
-            args = [ "-" ];
+            args = ["-"];
           };
-          language-servers = [ "kotlin-language-server" ];
+          language-servers = ["kotlin-language-server"];
         }
         {
           name = "elixir";
           auto-format = true;
-          language-servers = [ "elixir-ls" ];
+          language-servers = ["elixir-ls"];
         }
         {
           name = "scala";
           auto-format = false;
           formatter = {
             command = "scalafmt";
-            args = [ "--stdin" ];
+            args = ["--stdin"];
           };
-          language-servers = [ "metals" ];
+          language-servers = ["metals"];
         }
         # {
         #   name = "gleam";

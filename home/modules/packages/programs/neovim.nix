@@ -27,7 +27,7 @@
       which-key.enable = true;
       dashboard.enable = true;
       web-devicons.enable = true;
-      plugins.indent-blankline = {
+      indent-blankline = {
         enable = true;
         settings.exclude.filetypes = [
           "dashboard"
@@ -108,20 +108,20 @@
           };
         };
       };
-
-      # Packages
-      extraPackages = with pkgs; [
-        lazygit
-        ripgrep
-        fd
-
-        # Format
-        alejandra
-        clang-tools
-        ktfmt
-        scalafmt
-      ];
     };
+
+    # Packages
+    extraPackages = with pkgs; [
+      lazygit
+      ripgrep
+      fd
+
+      # Format
+      alejandra
+      clang-tools
+      ktfmt
+      scalafmt
+    ];
 
     # Extra Config
     extraConfigLua = ''

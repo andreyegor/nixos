@@ -1,7 +1,9 @@
-{ config, ... }:
-{
+{config, ...}: {
   programs = {
-    git.enable = true;
+    git = {
+      enable = true;
+      settings.core.editor = "hx";
+    };
     firefox = {
       enable = true;
       configPath = "${config.xdg.configHome}/mozilla/firefox";
