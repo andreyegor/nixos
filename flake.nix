@@ -74,5 +74,39 @@
           }
         ];
       };
+    nixosConfigurations."altai-pc" = nixpkgs.lib.nixosSystem {
+        inherit system;
+
+        specialArgs = {
+          inherit
+            pkgsUnstable
+            niri
+            noctalia
+            ;
+        };
+
+        modules = [
+          ./hosts/altai-pc
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.egor = import ./home/home.nix;
+
+            home-manager.extraSpecialArgs = {
+              hostName = "altai-pc";
+              inherit pkgsUnstable;
+            };
+
+            home-manager.sharedModules = [
+              niri.homeModules.niri
+              noctalia.homeModules.default
+              nixvim.homeModules.nixvim
+              catppuccin.homeModules.catppuccin
+            ];
+          }
+        ];
+      };
     };
 }
