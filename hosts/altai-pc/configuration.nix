@@ -6,7 +6,7 @@
 
     ../../modules/system/bluetooth.nix
     ../../modules/system/core.nix
-    ../../modules/system/boot.nix
+    ../../modules/system/boot-legacy.nix
     ../../modules/system/locale.nix
     ../../modules/system/networking.nix
     ../../modules/system/packages.nix
