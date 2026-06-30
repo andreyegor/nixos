@@ -485,10 +485,10 @@
     };
   };
 
-  # home.sessionVariables = {
-  #   GTK_THEME = "Adwaita:dark";
-  #   QT_STYLE_OVERRIDE = "adwaita-dark";
-  # };
+  home.sessionVariables = {
+    GTK_THEME = "Adwaita:dark";
+    QT_STYLE_OVERRIDE = "adwaita-dark";
+  };
 
   programs.kitty = {
     enable = true;
