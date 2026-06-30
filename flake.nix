@@ -29,84 +29,46 @@
     }:
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-      };
 
       pkgsUnstable = import unstable {
         inherit system;
         config.allowUnfree = true;
       };
+
+      mkHost = hostName:
+        nixpkgs.lib.nixosSystem {
+          inherit system;
+
+          specialArgs = {
+            inherit pkgsUnstable niri noctalia;
+          };
+
+          modules = [
+            (./hosts + "/${hostName}")
+
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.egor = import ./home/home.nix;
+
+              home-manager.extraSpecialArgs = {
+                inherit hostName pkgsUnstable;
+              };
+
+              home-manager.sharedModules = [
+                niri.homeModules.niri
+                noctalia.homeModules.default
+                nixvim.homeModules.nixvim
+                catppuccin.homeModules.catppuccin
+              ];
+            }
+          ];
+        };
     in
     {
-      nixosConfigurations."laptop-ga401qm" = nixpkgs.lib.nixosSystem {
-        inherit system;
-
-        specialArgs = {
-          inherit
-            pkgsUnstable
-            niri
-            noctalia
-            ;
-        };
-
-        modules = [
-          ./hosts/laptop-ga401qm
-
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.egor = import ./home/home.nix;
-
-            home-manager.extraSpecialArgs = {
-              hostName = "laptop-ga401qm";
-              inherit pkgsUnstable;
-            };
-
-            home-manager.sharedModules = [
-              niri.homeModules.niri
-              noctalia.homeModules.default
-              nixvim.homeModules.nixvim
-              catppuccin.homeModules.catppuccin
-            ];
-          }
-        ];
-      };
-    nixosConfigurations."altai-pc" = nixpkgs.lib.nixosSystem {
-        inherit system;
-
-        specialArgs = {
-          inherit
-            pkgsUnstable
-            niri
-            noctalia
-            ;
-        };
-
-        modules = [
-          ./hosts/altai-pc
-
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.egor = import ./home/home.nix;
-
-            home-manager.extraSpecialArgs = {
-              hostName = "altai-pc";
-              inherit pkgsUnstable;
-            };
-
-            home-manager.sharedModules = [
-              niri.homeModules.niri
-              noctalia.homeModules.default
-              nixvim.homeModules.nixvim
-              catppuccin.homeModules.catppuccin
-            ];
-          }
-        ];
-      };
+      nixosConfigurations = nixpkgs.lib.genAttrs
+        [ "laptop-ga401qm" "altai-pc" ]
+        mkHost;
     };
 }
