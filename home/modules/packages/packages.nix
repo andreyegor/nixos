@@ -32,6 +32,8 @@
     rustc
     cargo
     beam27Packages.elixir
+    
+    caligula
 
     act
     android-tools
