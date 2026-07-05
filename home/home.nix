@@ -27,5 +27,5 @@
     QT_QPA_PLATFORMTHEME = "gtk3";
   };
 
-  home.stateVersion = "25.11";
+  home.stateVersion = "26.05";
 }
