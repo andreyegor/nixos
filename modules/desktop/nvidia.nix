@@ -11,8 +11,6 @@
     open = false;
     modesetting.enable = true;
     nvidiaSettings = true;
-    package =
-      (pkgsUnstable.linuxPackagesFor config.boot.kernelPackages.kernel).nvidiaPackages.new_feature;
   };
   nixpkgs.config.nvidia.acceptLicense = true;
   nixpkgs.config.allowUnfreePredicate =
