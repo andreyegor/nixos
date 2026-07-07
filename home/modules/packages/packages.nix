@@ -34,6 +34,7 @@
     beam27Packages.elixir
     
     caligula
+    cifs-utils
 
     act
     android-tools
