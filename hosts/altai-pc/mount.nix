@@ -6,4 +6,11 @@
       "defaults"
     ];
   };
+  fileSystems."/mnt/Other" = {
+    device = "/dev/disk/by-uuid/A6628B15628AE97F";
+    fsType = "ntfs";
+    options = [
+      "defaults"
+    ];
+  };
 }

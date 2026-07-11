@@ -1,10 +1,11 @@
 {
-  "HDMI-A-1" = {
+  "DP-1" = {
     mode = {
       width = 1920;
       height = 1080;
-      refresh = 60.0;
+      refresh = 144.106;
     };
+    variable-refresh-rate = true;
     scale = 1.0;
     position = {
       x = 0;

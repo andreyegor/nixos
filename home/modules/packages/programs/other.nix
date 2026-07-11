@@ -1,8 +1,13 @@
-{config, ...}: {
+{ config, pkgs, ... }: {
   programs = {
     git = {
       enable = true;
       settings.core.editor = "hx";
+      extraConfig = {
+        credential."https://github.com" = {
+          helper = "!${pkgs.gh}/bin/gh auth git-credential";
+        };
+      };
     };
     firefox = {
       enable = true;

@@ -67,7 +67,9 @@
     signal-desktop
     telegram-desktop
 
+    protonplus
     prismlauncher
+    
     appflowy
   ];
 
