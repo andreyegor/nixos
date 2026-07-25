@@ -11,6 +11,7 @@
     ../../modules/system/networking.nix
     ../../modules/system/packages.nix
     ../../modules/system/programs.nix
+    ../../modules/system/vmvariant.nix
 
     ../../modules/desktop/greetd.nix
     ../../modules/desktop/niri.nix

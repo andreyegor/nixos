@@ -12,6 +12,7 @@
       "kvm"
     ];
     shell = pkgs.zsh;
+    initialPassword = "1";
   };
   programs.zsh.enable = true;
 }

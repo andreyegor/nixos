@@ -7,6 +7,8 @@
   home.packages = with pkgs; [
     gh
     xxh
+    
+    gnumake
 
     sbt
     mill

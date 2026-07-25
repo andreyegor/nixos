@@ -432,7 +432,7 @@
         solidColor = "#1a1a2e";
         fillColor = "#000000";
         setWallpaperOnAllMonitors = false;
-        enableMultiMonitorDirectories = true;
+        enableMultiMonitorDirectories = false;
       };
 
       noctaliaPerformance = {
