@@ -1,10 +1,11 @@
 {
   pkgs,
   pkgsUnstable,
+  lib,
   ...
 }:
 {
-  home.packages = with pkgs; [
+  home.packages = lib.optionals pkgs.stdenv.isLinux (with pkgs; [
     caligula
     cifs-utils
     appimage-run
@@ -21,9 +22,9 @@
         "--ozone-platform=wayland"
       ];
     })
-  ];
+  ]);
 
-  home.sessionVariables = {
+  home.sessionVariables = lib.mkIf pkgs.stdenv.isLinux {
     WEBKIT_DISABLE_DMABUF_RENDERER = 1;
   };
 }
