@@ -18,7 +18,7 @@
       height = 1080;
       refresh = 143.981;
     };
-    variable-refresh-rate = true;
+    variable-refresh-rate = false;
     scale = 1.25;
     position = {
       x = 0;

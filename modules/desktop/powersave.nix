@@ -16,8 +16,8 @@
 
   services.logind.settings.Login = {
     HandleLidSwitch = "suspend"; # "suspend-then-hibernate" поломан пока что
-    HandleLidSwitchDocked = "suspend";
-    HandleLidSwitchExternalPower = "suspend";
+    HandleLidSwitchDocked = "ignore";
+    HandleLidSwitchExternalPower = "ignore";
   };
   systemd.sleep.settings.Sleep = {
     HibernateDelaySec = "4h";
