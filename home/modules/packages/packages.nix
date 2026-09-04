@@ -7,7 +7,7 @@
   home.packages = with pkgs; [
     gh
     xxh
-    
+
     gnumake
 
     sbt
@@ -34,9 +34,6 @@
     rustc
     cargo
     beam27Packages.elixir
-    
-    caligula
-    cifs-utils
 
     act
     android-tools
@@ -45,37 +42,20 @@
     quarto
     pandoc
     texlive.combined.scheme-full
-    libreoffice
 
-    (pkgsUnstable.vscode.override {
-      commandLineArgs = [
-        "--enable-features=UseOzonePlatform"
-        "--ozone-platform=wayland"
-      ];
-    })
     claude-code
-
-    appimage-run
 
     hoppscotch
     insomnia
 
-    figma-linux
-
     lowfi
     pkgsUnstable.spotify
-    yandex-music
 
     signal-desktop
     telegram-desktop
 
-    protonplus
     prismlauncher
-    
+
     appflowy
   ];
-
-  home.sessionVariables = {
-    WEBKIT_DISABLE_DMABUF_RENDERER = 1;
-  };
 }

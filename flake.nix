@@ -6,6 +6,8 @@
     unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager/release-26.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    darwin.url = "github:lnl7/nix-darwin/master";
+    darwin.inputs.nixpkgs.follows = "nixpkgs";
     niri.url = "github:sodiboo/niri-flake";
     niri.inputs.nixpkgs.follows = "nixpkgs";
     noctalia.url = "github:noctalia-dev/noctalia/legacy-v4";
@@ -21,6 +23,7 @@
       nixpkgs,
       unstable,
       home-manager,
+      darwin,
       niri,
       noctalia,
       catppuccin,
@@ -28,16 +31,22 @@
       ...
     }:
     let
-      system = "x86_64-linux";
+      linuxSystem = "x86_64-linux";
+      darwinSystem = "aarch64-darwin";
 
       pkgsUnstable = import unstable {
-        inherit system;
+        system = linuxSystem;
+        config.allowUnfree = true;
+      };
+
+      pkgsDarwinUnstable = import unstable {
+        system = darwinSystem;
         config.allowUnfree = true;
       };
 
       mkHost = hostName:
         nixpkgs.lib.nixosSystem {
-          inherit system;
+          system = linuxSystem;
 
           specialArgs = {
             inherit pkgsUnstable niri noctalia;
@@ -70,5 +79,34 @@
       nixosConfigurations = nixpkgs.lib.genAttrs
         [ "laptop-ga401qm" "altai-pc" ]
         mkHost;
+
+      darwinConfigurations."macbook-air-m5" = darwin.lib.darwinSystem {
+        system = darwinSystem;
+
+        specialArgs = {
+          pkgsUnstable = pkgsDarwinUnstable;
+        };
+
+        modules = [
+          ./hosts/macbook-air-m5
+
+          home-manager.darwinModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.egor = import ./home/home-darwin.nix;
+
+            home-manager.extraSpecialArgs = {
+              hostName = "macbook-air-m5";
+              pkgsUnstable = pkgsDarwinUnstable;
+            };
+
+            home-manager.sharedModules = [
+              nixvim.homeModules.nixvim
+              catppuccin.homeModules.catppuccin
+            ];
+          }
+        ];
+      };
     };
 }
