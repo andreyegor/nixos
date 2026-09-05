@@ -7,5 +7,7 @@
 
   users.users.egor.home = "/Users/egor";
 
+  system.primaryUser = "egor";
+
   system.stateVersion = 5;
 }
