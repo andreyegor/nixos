@@ -14,7 +14,6 @@
       configPath = "${config.xdg.configHome}/mozilla/firefox";
     };
     vesktop.enable = true;
-    onlyoffice.enable = true;
     spotify-player.enable = true;
     direnv = {
       enable = true;
