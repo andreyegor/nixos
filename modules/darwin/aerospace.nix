@@ -7,6 +7,16 @@
     settings = {
       automatically-unhide-macos-hidden-apps = true;
 
+      # Не создавать новый macOS Space для каждого воркспейса
+      on-focused-monitor-changed = [ "move-mouse-cursor-force" ];
+
+      # Явно объявить только нужные воркспейсы
+      workspace-to-monitor-force-assignment = {
+        "1" = 1; "2" = 1; "3" = 1;
+        "4" = 1; "5" = 1; "6" = 1;
+        "7" = 1; "8" = 1; "9" = 1;
+      };
+
       gaps = {
         inner.horizontal = 10;
         inner.vertical = 10;
@@ -23,8 +33,7 @@
 
         # Windows
         "alt-q"       = "close";
-        "alt-f"       = "fullscreen";
-        "alt-shift-f" = "layout fullscreen tiling";
+        "alt-f" = "fullscreen";
         "alt-v"       = "layout floating tiling";
 
         # Resize  (Mod+Minus / Mod+Equal)

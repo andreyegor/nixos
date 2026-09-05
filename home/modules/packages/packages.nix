@@ -36,7 +36,6 @@
     beam27Packages.elixir
 
     act
-    android-tools
 
     quarto
     pandoc
