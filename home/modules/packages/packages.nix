@@ -43,17 +43,9 @@
 
     claude-code
 
-    hoppscotch
-    insomnia
-
     lowfi
-    pkgsUnstable.spotify
-
-    signal-desktop
-    telegram-desktop
+    spotify
 
     prismlauncher
-
-    appflowy
   ];
 }
