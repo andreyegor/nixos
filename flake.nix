@@ -93,7 +93,7 @@
           home-manager.darwinModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
+            home-manager.useUserPackages = false;
             home-manager.users.egor = import ./home/home-darwin.nix;
 
             home-manager.extraSpecialArgs = {
