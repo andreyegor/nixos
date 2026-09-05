@@ -7,16 +7,6 @@
     settings = {
       automatically-unhide-macos-hidden-apps = true;
 
-      # Не создавать новый macOS Space для каждого воркспейса
-      on-focused-monitor-changed = [ "move-mouse-cursor-force" ];
-
-      # Явно объявить только нужные воркспейсы
-      workspace-to-monitor-force-assignment = {
-        "1" = 1; "2" = 1; "3" = 1;
-        "4" = 1; "5" = 1; "6" = 1;
-        "7" = 1; "8" = 1; "9" = 1;
-      };
-
       gaps = {
         inner.horizontal = 10;
         inner.vertical = 10;
