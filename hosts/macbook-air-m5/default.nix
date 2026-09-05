@@ -5,5 +5,6 @@
     ./apps.nix
 
     ../../modules/darwin/aerospace.nix
+    ../../modules/darwin/ui.nix
   ];
 }
