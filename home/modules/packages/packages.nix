@@ -37,7 +37,6 @@
 
     act
     android-tools
-    android-studio
 
     quarto
     pandoc
