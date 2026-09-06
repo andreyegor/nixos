@@ -13,7 +13,6 @@
       enable = true;
       configPath = "${config.xdg.configHome}/mozilla/firefox";
     };
-    vesktop.enable = true;
     spotify-player.enable = true;
     direnv = {
       enable = true;

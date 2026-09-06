@@ -46,6 +46,7 @@
     lowfi
     spotify
 
+    discord
     prismlauncher
   ];
 }
