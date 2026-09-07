@@ -41,7 +41,10 @@
     pandoc
     texlive.combined.scheme-full
 
+    micro
+
     claude-code
+    pi-coding-agent # Не забудь поставить pi-ollama
 
     lowfi
     spotify

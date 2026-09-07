@@ -6,8 +6,10 @@ let
     MONITOR=$(${aerospace} list-monitors --focused | awk '{print $1}')
     if [ "$MONITOR" = "1" ]; then
       ${aerospace} workspace "$N"
-    else
+    elif [ "$MONITOR" = "2" ]; then
       ${aerospace} workspace "$((N + 10))"
+    else
+      ${aerospace} workspace "$((N + 20))"
     fi
   '';
   moveToWs = pkgs.writeShellScript "aerospace-move-to-ws" ''
@@ -15,8 +17,10 @@ let
     MONITOR=$(${aerospace} list-monitors --focused | awk '{print $1}')
     if [ "$MONITOR" = "1" ]; then
       ${aerospace} move-node-to-workspace "$N"
-    else
+    elif [ "$MONITOR" = "2" ]; then
       ${aerospace} move-node-to-workspace "$((N + 10))"
+    else
+      ${aerospace} move-node-to-workspace "$((N + 20))"
     fi
   '';
 in
@@ -40,11 +44,12 @@ in
         "6"  = 1; "7"  = 1; "8"  = 1; "9"  = 1;
         "11" = 2; "12" = 2; "13" = 2; "14" = 2; "15" = 2;
         "16" = 2; "17" = 2; "18" = 2; "19" = 2;
+        "21" = 3; "22" = 3; "23" = 3; "24" = 3; "25" = 3;
+        "26" = 3; "27" = 3; "28" = 3; "29" = 3;
       };
 
       mode.main.binding = {
-        "alt-s" = "exec-and-forget kitty";
-        "alt-l" = "exec-and-forget /System/Library/CoreServices/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine";
+        "alt-s" = "exec-and-forget open -a Terminal";
 
         "alt-q" = "close";
         "alt-f" = "fullscreen";
