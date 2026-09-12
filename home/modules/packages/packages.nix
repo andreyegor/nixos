@@ -7,6 +7,7 @@
   home.packages = with pkgs; [
     gh
     xxh
+    nixfmt
 
     gnumake
 
@@ -43,11 +44,14 @@
 
     micro
 
+    walk.cpp
     claude-code
-    pi-coding-agent # Не забудь поставить pi-ollama
+    pi-coding-agent # Не забыть поставить pi-ollama
 
     lowfi
     spotify
+
+    signal-desktop
 
     discord
     prismlauncher

@@ -14,6 +14,5 @@
     pciutils
     powertop
     fastfetch
-    nixfmt
   ];
 }
