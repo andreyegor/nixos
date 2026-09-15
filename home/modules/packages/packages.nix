@@ -44,7 +44,6 @@
 
     micro
 
-    walk.cpp
     claude-code
     pi-coding-agent # Не забыть поставить pi-ollama
 

@@ -2,7 +2,6 @@
   imports = [
     ./hardware-configuration.nix
     ./device.nix
-    ./programs.nix
 
     ../../modules/system/bluetooth.nix
     ../../modules/system/core.nix
@@ -10,7 +9,7 @@
     ../../modules/system/locale.nix
     ../../modules/system/networking.nix
     ../../modules/system/packages.nix
-    ../../modules/system/programs.nix
+    ../../modules/system/programs-linux.nix
     ../../modules/system/vmvariant.nix
 
     ../../modules/desktop/greetd.nix

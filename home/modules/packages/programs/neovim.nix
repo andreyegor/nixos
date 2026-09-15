@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   programs.nixvim = {
-    enable = true;
+    enable = false;
 
     opts = {
       mouse = "a";

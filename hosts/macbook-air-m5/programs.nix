@@ -1,9 +1,8 @@
 {
   pkgs,
+  pkgsUnstable,
   ...
 }:
 {
-  environment.systemPackages = with pkgs; [
-    ollama
-  ];
+  
 }
