@@ -11,6 +11,7 @@
     };
     firefox = {
       enable = true;
+      package = pkgs.firefox-bin;
       configPath = "${config.xdg.configHome}/mozilla/firefox";
     };
     spotify-player.enable = true;

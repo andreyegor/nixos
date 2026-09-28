@@ -44,13 +44,14 @@
 
     micro
 
-    claude-code
+    opencode
     pi-coding-agent # Не забыть поставить pi-ollama
 
     lowfi
     spotify
 
     signal-desktop
+    telegram-desktop
 
     discord
     prismlauncher

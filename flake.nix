@@ -14,7 +14,6 @@
     noctalia.inputs.nixpkgs.follows = "nixpkgs";
     catppuccin.url = "github:catppuccin/nix/release-26.05";
     catppuccin.inputs.nixpkgs.follows = "nixpkgs";
-    nixvim.url = "github:nix-community/nixvim/nixos-26.05";
   };
 
   outputs =
@@ -27,7 +26,6 @@
       niri,
       noctalia,
       catppuccin,
-      nixvim,
       ...
     }:
     let
@@ -68,7 +66,6 @@
               home-manager.sharedModules = [
                 niri.homeModules.niri
                 noctalia.homeModules.default
-                nixvim.homeModules.nixvim
                 catppuccin.homeModules.catppuccin
               ];
             }
@@ -102,7 +99,6 @@
             };
 
             home-manager.sharedModules = [
-              nixvim.homeModules.nixvim
               catppuccin.homeModules.catppuccin
             ];
           }

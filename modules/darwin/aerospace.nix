@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, pkgsUnstable, ... }:
 let
   aerospace = "/run/current-system/sw/bin/aerospace";
   switchWs = pkgs.writeShellScript "aerospace-switch-ws" ''
@@ -27,6 +27,7 @@ in
 {
   services.aerospace = {
     enable = true;
+    package = pkgsUnstable.aerospace;
     settings = {
       automatically-unhide-macos-hidden-apps = true;
 
@@ -40,12 +41,33 @@ in
       };
 
       workspace-to-monitor-force-assignment = {
-        "1"  = 1; "2"  = 1; "3"  = 1; "4"  = 1; "5"  = 1;
-        "6"  = 1; "7"  = 1; "8"  = 1; "9"  = 1;
-        "11" = 2; "12" = 2; "13" = 2; "14" = 2; "15" = 2;
-        "16" = 2; "17" = 2; "18" = 2; "19" = 2;
-        "21" = 3; "22" = 3; "23" = 3; "24" = 3; "25" = 3;
-        "26" = 3; "27" = 3; "28" = 3; "29" = 3;
+        "1" = 1;
+        "2" = 1;
+        "3" = 1;
+        "4" = 1;
+        "5" = 1;
+        "6" = 1;
+        "7" = 1;
+        "8" = 1;
+        "9" = 1;
+        "11" = 2;
+        "12" = 2;
+        "13" = 2;
+        "14" = 2;
+        "15" = 2;
+        "16" = 2;
+        "17" = 2;
+        "18" = 2;
+        "19" = 2;
+        "21" = 3;
+        "22" = 3;
+        "23" = 3;
+        "24" = 3;
+        "25" = 3;
+        "26" = 3;
+        "27" = 3;
+        "28" = 3;
+        "29" = 3;
       };
 
       mode.main.binding = {
@@ -55,25 +77,25 @@ in
         "alt-f" = "fullscreen";
         "alt-v" = "layout floating tiling";
 
-        "alt-minus"       = "resize width -100";
-        "alt-equal"       = "resize width +100";
+        "alt-minus" = "resize width -100";
+        "alt-equal" = "resize width +100";
         "alt-shift-minus" = "resize height -100";
         "alt-shift-equal" = "resize height +100";
 
-        "alt-left"  = "focus left";
+        "alt-left" = "focus left";
         "alt-right" = "focus right";
-        "alt-up"    = "focus up";
-        "alt-down"  = "focus down";
+        "alt-up" = "focus up";
+        "alt-down" = "focus down";
 
-        "alt-shift-left"  = "move left";
+        "alt-shift-left" = "move left";
         "alt-shift-right" = "move right";
-        "alt-shift-up"    = "move up";
-        "alt-shift-down"  = "move down";
+        "alt-shift-up" = "move up";
+        "alt-shift-down" = "move down";
 
-        "alt-ctrl-left"  = "focus-monitor left";
+        "alt-ctrl-left" = "focus-monitor left";
         "alt-ctrl-right" = "focus-monitor right";
 
-        "alt-shift-ctrl-left"  = "move-node-to-monitor left";
+        "alt-shift-ctrl-left" = "move-node-to-monitor left";
         "alt-shift-ctrl-right" = "move-node-to-monitor right";
 
         "alt-1" = "exec-and-forget ${switchWs} 1";
