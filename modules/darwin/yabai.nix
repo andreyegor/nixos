@@ -29,7 +29,7 @@
   };
 
   security.sudo.extraConfig = ''
-    %admin ALL=(root) NOPASSWD: sha256:* /run/current-system/sw/bin/yabai --load-sa
+    %admin ALL=(root) NOPASSWD: /run/current-system/sw/bin/yabai --load-sa
   '';
 
   system.defaults = {

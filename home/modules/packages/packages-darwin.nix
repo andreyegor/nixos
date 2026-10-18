@@ -11,5 +11,7 @@
     docker
     docker-compose
     colima
+
+    utm
   ]);
 }

@@ -44,8 +44,16 @@
 
     micro
 
+    teleport
+    kubectl
+    
+    pkgsUnstable.codex
     opencode
+    claude-code
     pi-coding-agent # Не забыть поставить pi-ollama
+
+    lens
+    pkgsUnstable.jetbrains.idea
 
     lowfi
     spotify
