@@ -14,6 +14,7 @@
       package = pkgs.firefox-bin;
       configPath = "${config.xdg.configHome}/mozilla/firefox";
     };
+    google-chrome.enable = true;
     spotify-player.enable = true;
     direnv = {
       enable = true;

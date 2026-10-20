@@ -4,12 +4,15 @@
   ...
 }:
 {
+  home.sessionVariables.JAVA_HOME = pkgs.javaPackages.compiler.temurin-bin.jdk-21.home;
+
   home.packages = with pkgs; [
     gh
     xxh
     nixfmt
 
     gnumake
+    pnpm
 
     sbt
     mill
