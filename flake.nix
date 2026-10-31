@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+    hermes-agent.url = "github:NousResearch/hermes-agent";
     home-manager.url = "github:nix-community/home-manager/release-26.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-26.05";
@@ -21,6 +22,7 @@
       self,
       nixpkgs,
       unstable,
+      hermes-agent,
       home-manager,
       darwin,
       niri,
@@ -60,7 +62,7 @@
               home-manager.users.egor = import ./home/home.nix;
 
               home-manager.extraSpecialArgs = {
-                inherit hostName pkgsUnstable;
+                inherit hostName pkgsUnstable hermes-agent;
               };
 
               home-manager.sharedModules = [
@@ -95,6 +97,7 @@
 
             home-manager.extraSpecialArgs = {
               hostName = "macbook-air-m5";
+              inherit hermes-agent;
               pkgsUnstable = pkgsDarwinUnstable;
             };
 

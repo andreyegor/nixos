@@ -1,6 +1,7 @@
 {
   pkgs,
   pkgsUnstable,
+  hermes-agent,
   ...
 }:
 {
@@ -21,6 +22,8 @@
     scala
     scala-cli
     metals
+
+    nodejs_24
 
     go
     (python3.withPackages (
@@ -50,6 +53,8 @@
     teleport
     kubectl
     
+    hermes-agent.packages.${pkgs.stdenv.hostPlatform.system}.default
+    hermes-agent.packages.${pkgs.stdenv.hostPlatform.system}.desktop
     pkgsUnstable.codex
     opencode
     claude-code
