@@ -4,6 +4,14 @@
   hermes-agent,
   ...
 }:
+let
+  # Flake builds stamp the placeholder "0.0.0", which fails plugins' requires_hermes
+  # (and omh rejects "unknown"). Only the version label is pinned: the flake input
+  # still tracks main, so bump this when a plugin needs a newer release.
+  hermesFull = hermes-agent.packages.${pkgs.stdenv.hostPlatform.system}.default.override {
+    version = "0.23.0";
+  };
+in
 {
   home.sessionVariables.JAVA_HOME = pkgs.javaPackages.compiler.temurin-bin.jdk-21.home;
 
@@ -53,9 +61,9 @@
     teleport
     kubectl
     
-    hermes-agent.packages.${pkgs.stdenv.hostPlatform.system}.default
-    hermes-agent.packages.${pkgs.stdenv.hostPlatform.system}.desktop
-    pkgsUnstable.codex
+    hermesFull
+    hermesFull.hermesDesktop
+    codex
     opencode
     claude-code
     pi-coding-agent # Не забыть поставить pi-ollama

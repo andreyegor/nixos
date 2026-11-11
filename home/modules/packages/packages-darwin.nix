@@ -6,8 +6,14 @@
   ...
 }:
 let
-  hermesDesktop = hermes-agent.packages.${pkgs.stdenv.hostPlatform.system}.desktop;
-  hermesAgent = hermes-agent.packages.${pkgs.stdenv.hostPlatform.system}.default;
+  # Flake builds stamp the placeholder "0.0.0", which fails plugins' requires_hermes
+  # (and omh rejects "unknown"). Only the version label is pinned: the flake input
+  # still tracks main, so bump this when a plugin needs a newer release.
+  hermesFull = hermes-agent.packages.${pkgs.stdenv.hostPlatform.system}.default.override {
+    version = "0.23.0";
+  };
+  hermesDesktop = hermesFull.hermesDesktop;
+  hermesAgent = hermesFull;
   # Match the Electron runtime used to compile the desktop's native modules.
   hermesElectron = hermes-agent.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system}.electron;
   hermesApp = pkgs.runCommand "hermes-desktop-app" {

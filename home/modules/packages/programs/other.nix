@@ -3,7 +3,7 @@
     git = {
       enable = true;
       settings.core.editor = "hx";
-      extraConfig = {
+      settings = {
         credential."https://github.com" = {
           helper = "!${pkgs.gh}/bin/gh auth git-credential";
         };

@@ -4,7 +4,9 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
-    hermes-agent.url = "github:NousResearch/hermes-agent";
+    # Temporary local vendor: 444f9808's pnpmDeps hash is platform-specific.
+    # Return to github:NousResearch/hermes-agent after upstream fixes the hash.
+    hermes-agent.url = "git+file:///Users/egor/code/hermes-agent-darwin-pnpm-fix";
     home-manager.url = "github:nix-community/home-manager/release-26.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-26.05";
